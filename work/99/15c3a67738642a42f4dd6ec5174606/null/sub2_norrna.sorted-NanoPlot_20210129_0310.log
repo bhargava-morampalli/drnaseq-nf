@@ -1,0 +1,69 @@
+2021-01-29 03:10:04,361 NanoPlot 1.32.1 started with arguments Namespace(N50=False, alength=False, bam=['sub2_norrna.sorted.bam'], barcoded=False, color='#4CB391', colormap='Greens', cram=None, downsample=None, dpi=100, drop_outliers=False, fasta=None, fastq=None, fastq_minimal=None, fastq_rich=None, feather=None, font_scale=1, format='png', hide_stats=False, huge=False, listcolormaps=False, listcolors=False, loglength=False, maxlength=10000, minlength=None, minqual=None, no_N50=False, no_supplementary=False, outdir='null/', path='null/sub2_norrna.sorted-', percentqual=False, pickle=None, plots=['hex', 'dot', 'kde', 'pauvre'], prefix='sub2_norrna.sorted-', raw=True, readtype='1D', runtime_until=None, store=True, summary=None, threads=40, title='sub2_norrna.sorted.bam', tsv_stats=False, ubam=None, verbose=False)
+2021-01-29 03:10:04,361 Python version is: 3.8.5 | packaged by conda-forge | (default, Aug 29 2020, 01:22:49)  [GCC 7.5.0]
+2021-01-29 03:10:04,361 NanoPlot:  valid output format png
+2021-01-29 03:10:04,369 Nanoget: Starting to collect statistics from bam file sub2_norrna.sorted.bam.
+2021-01-29 03:10:04,439 Nanoget: No index for bam file could be found, created index.
+2021-01-29 03:10:04,440 Nanoget: Bam file sub2_norrna.sorted.bam contains 649 mapped and 4355 unmapped reads.
+2021-01-29 03:10:04,669 Nanoget: bam sub2_norrna.sorted.bam contains 649 primary alignments.
+2021-01-29 03:10:04,689 Reduced DataFrame memory usage from 0.09222126007080078Mb to 0.07303428649902344Mb
+2021-01-29 03:10:04,705 Nanoget: Gathered all metrics of 649 reads
+2021-01-29 03:10:04,728 Calculated statistics
+2021-01-29 03:10:04,729 Using sequenced read lengths for plotting.
+2021-01-29 03:10:04,731 Hidding 0 reads longer than 10000bp in length plots.
+2021-01-29 03:10:04,733 NanoPlot:  Valid color #4CB391.
+2021-01-29 03:10:04,734 NanoPlot:  Valid colormap Greens.
+2021-01-29 03:10:04,734 NanoPlot:  Creating length plots for Read length.
+2021-01-29 03:10:04,735 NanoPlot:  Using 649 reads maximum of 4774bp.
+2021-01-29 03:10:05,969 Nanoplotter: orca not found, not creating static image of html. See https://github.com/plotly/orca
+2021-01-29 03:10:05,970 Image generation requires the psutil package.
+
+Install using pip:
+    $ pip install psutil
+
+Install using conda:
+    $ conda install psutil
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/nanoplotter/plot.py", line 60, in save_static
+    pio.write_image(self.fig, self.path.replace('html', 'png'))
+  File "/usr/local/lib/python3.8/site-packages/plotly/io/_kaleido.py", line 244, in write_image
+    img_data = to_image(
+  File "/usr/local/lib/python3.8/site-packages/plotly/io/_kaleido.py", line 102, in to_image
+    return to_image_orca(
+  File "/usr/local/lib/python3.8/site-packages/plotly/io/_orca.py", line 1535, in to_image
+    ensure_server()
+  File "/usr/local/lib/python3.8/site-packages/plotly/io/_orca.py", line 1361, in ensure_server
+    raise ValueError(
+ValueError: Image generation requires the psutil package.
+
+Install using pip:
+    $ pip install psutil
+
+Install using conda:
+    $ conda install psutil
+
+2021-01-29 03:10:06,209 Created length plots
+2021-01-29 03:10:06,211 NanoPlot:  Creating Read lengths vs Average read quality plots using statistics from 649 reads.
+2021-01-29 03:10:08,884 'text.latex.unicode is not a valid rc parameter (see rcParams.keys() for a list of valid parameters)'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/matplotlib/__init__.py", line 677, in __setitem__
+    cval = self.validate[key](val)
+KeyError: 'text.latex.unicode'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/nanoplot/NanoPlot.py", line 101, in main
+    plots = make_plots(datadf, settings)
+  File "/usr/local/lib/python3.8/site-packages/nanoplot/NanoPlot.py", line 160, in make_plots
+    nanoplotter.scatter(
+  File "/usr/local/lib/python3.8/site-packages/nanoplotter/nanoplotter_main.py", line 222, in scatter
+    margin_plot(df=pd.DataFrame({"length": x, "meanQual": y}),
+  File "/usr/local/lib/python3.8/site-packages/pauvre/marginplot.py", line 197, in margin_plot
+    rc.update_rcParams()
+  File "/usr/local/lib/python3.8/site-packages/pauvre/rcparams.py", line 7, in update_rcParams
+    rcParams.update({
+  File "/usr/local/lib/python3.8/_collections_abc.py", line 832, in update
+    self[key] = other[key]
+  File "/usr/local/lib/python3.8/site-packages/matplotlib/__init__.py", line 682, in __setitem__
+    raise KeyError(
+KeyError: 'text.latex.unicode is not a valid rc parameter (see rcParams.keys() for a list of valid parameters)'

@@ -1,0 +1,31 @@
+WARNING: Skipping mount /usr/local/var/singularity/mnt/session/etc/resolv.conf [files]: /etc/resolv.conf doesn't exist in container
+[E::idx_find_and_load] Could not retrieve index file for 'sub1_full.sorted.bam'
+/usr/local/lib/python3.8/_collections_abc.py:702: MatplotlibDeprecationWarning: The global colormaps dictionary is no longer considered public API.
+  return len(self._mapping)
+/usr/local/lib/python3.8/_collections_abc.py:720: MatplotlibDeprecationWarning: The global colormaps dictionary is no longer considered public API.
+  yield from self._mapping
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/matplotlib/__init__.py", line 677, in __setitem__
+    cval = self.validate[key](val)
+KeyError: 'text.latex.unicode'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/NanoPlot", line 10, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.8/site-packages/nanoplot/NanoPlot.py", line 101, in main
+    plots = make_plots(datadf, settings)
+  File "/usr/local/lib/python3.8/site-packages/nanoplot/NanoPlot.py", line 160, in make_plots
+    nanoplotter.scatter(
+  File "/usr/local/lib/python3.8/site-packages/nanoplotter/nanoplotter_main.py", line 222, in scatter
+    margin_plot(df=pd.DataFrame({"length": x, "meanQual": y}),
+  File "/usr/local/lib/python3.8/site-packages/pauvre/marginplot.py", line 197, in margin_plot
+    rc.update_rcParams()
+  File "/usr/local/lib/python3.8/site-packages/pauvre/rcparams.py", line 7, in update_rcParams
+    rcParams.update({
+  File "/usr/local/lib/python3.8/_collections_abc.py", line 832, in update
+    self[key] = other[key]
+  File "/usr/local/lib/python3.8/site-packages/matplotlib/__init__.py", line 682, in __setitem__
+    raise KeyError(
+KeyError: 'text.latex.unicode is not a valid rc parameter (see rcParams.keys() for a list of valid parameters)'

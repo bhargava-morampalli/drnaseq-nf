@@ -1,0 +1,8 @@
+[INFO   ]         multiqc : This is MultiQC v1.9
+[INFO   ]         multiqc : Template    : default
+[INFO   ]         multiqc : Searching   : /scratch/bhargava/nextflow-test/work/6b/785d145cbf8d2407f15d9f7fa65238
+[INFO   ]          fastqc : Found 6 reports
+[INFO   ]         multiqc : Compressing plot data
+[INFO   ]         multiqc : Report      : multiqc_report.html
+[INFO   ]         multiqc : Data        : multiqc_data
+[INFO   ]         multiqc : MultiQC complete

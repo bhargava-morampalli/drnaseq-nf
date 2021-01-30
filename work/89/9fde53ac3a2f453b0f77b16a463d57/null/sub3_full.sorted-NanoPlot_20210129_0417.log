@@ -1,0 +1,85 @@
+2021-01-29 04:17:12,229 NanoPlot 1.32.1 started with arguments Namespace(N50=False, alength=False, bam=['sub3_full.sorted.bam'], barcoded=False, color='#4CB391', colormap='Greens', cram=None, downsample=None, dpi=100, drop_outliers=False, fasta=None, fastq=None, fastq_minimal=None, fastq_rich=None, feather=None, font_scale=1, format='png', hide_stats=False, huge=False, listcolormaps=False, listcolors=False, loglength=False, maxlength=10000, minlength=None, minqual=None, no_N50=False, no_supplementary=False, outdir='null/', path='null/sub3_full.sorted-', percentqual=False, pickle=None, plots=['hex', 'dot', 'kde'], prefix='sub3_full.sorted-', raw=True, readtype='1D', runtime_until=None, store=True, summary=None, threads=40, title='sub3_full.sorted.bam', tsv_stats=False, ubam=None, verbose=False)
+2021-01-29 04:17:12,229 Python version is: 3.8.5 | packaged by conda-forge | (default, Aug 29 2020, 01:22:49)  [GCC 7.5.0]
+2021-01-29 04:17:12,230 NanoPlot:  valid output format png
+2021-01-29 04:17:12,237 Nanoget: Starting to collect statistics from bam file sub3_full.sorted.bam.
+2021-01-29 04:17:12,297 Nanoget: No index for bam file could be found, created index.
+2021-01-29 04:17:12,297 Nanoget: Bam file sub3_full.sorted.bam contains 2705 mapped and 2305 unmapped reads.
+2021-01-29 04:17:12,827 Nanoget: bam sub3_full.sorted.bam contains 2705 primary alignments.
+2021-01-29 04:17:12,844 Reduced DataFrame memory usage from 0.38437366485595703Mb to 0.30440330505371094Mb
+2021-01-29 04:17:12,859 Nanoget: Gathered all metrics of 2705 reads
+2021-01-29 04:17:12,915 Calculated statistics
+2021-01-29 04:17:12,915 Using sequenced read lengths for plotting.
+2021-01-29 04:17:12,918 Hidding 0 reads longer than 10000bp in length plots.
+2021-01-29 04:17:12,920 NanoPlot:  Valid color #4CB391.
+2021-01-29 04:17:12,922 NanoPlot:  Valid colormap Greens.
+2021-01-29 04:17:12,923 NanoPlot:  Creating length plots for Read length.
+2021-01-29 04:17:12,923 NanoPlot:  Using 2705 reads maximum of 3019bp.
+2021-01-29 04:17:14,448 Nanoplotter: orca not found, not creating static image of html. See https://github.com/plotly/orca
+2021-01-29 04:17:14,448 Image generation requires the psutil package.
+
+Install using pip:
+    $ pip install psutil
+
+Install using conda:
+    $ conda install psutil
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/nanoplotter/plot.py", line 60, in save_static
+    pio.write_image(self.fig, self.path.replace('html', 'png'))
+  File "/usr/local/lib/python3.8/site-packages/plotly/io/_kaleido.py", line 244, in write_image
+    img_data = to_image(
+  File "/usr/local/lib/python3.8/site-packages/plotly/io/_kaleido.py", line 102, in to_image
+    return to_image_orca(
+  File "/usr/local/lib/python3.8/site-packages/plotly/io/_orca.py", line 1535, in to_image
+    ensure_server()
+  File "/usr/local/lib/python3.8/site-packages/plotly/io/_orca.py", line 1361, in ensure_server
+    raise ValueError(
+ValueError: Image generation requires the psutil package.
+
+Install using pip:
+    $ pip install psutil
+
+Install using conda:
+    $ conda install psutil
+
+2021-01-29 04:17:14,742 Created length plots
+2021-01-29 04:17:14,745 NanoPlot:  Creating Read lengths vs Average read quality plots using statistics from 2705 reads.
+2021-01-29 04:17:18,342 Created LengthvsQual plot
+2021-01-29 04:17:18,344 NanoPlot:  Creating Aligned read lengths vs Sequenced read length plots using statistics from 2705 reads.
+2021-01-29 04:17:21,707 Created AlignedLength vs Length plot.
+2021-01-29 04:17:21,708 NanoPlot:  Creating Read mapping quality vs Average basecall quality plots using statistics from 2705 reads.
+2021-01-29 04:17:24,998 Created MapQvsBaseQ plot.
+2021-01-29 04:17:24,999 NanoPlot:  Creating Read length vs Read mapping quality plots using statistics from 2705 reads.
+2021-01-29 04:17:28,326 Created Mapping quality vs read length plot.
+2021-01-29 04:17:28,327 NanoPlot:  Creating Percent identity vs Average Base Quality plots using statistics from 2705 reads.
+2021-01-29 04:17:31,770 Created Percent ID vs Base quality plot.
+2021-01-29 04:17:31,772 NanoPlot:  Creating Aligned read length vs Percent identity plots using statistics from 2705 reads.
+2021-01-29 04:17:35,429 Nanoplotter: orca not found, not creating static image of html. See https://github.com/plotly/orca
+2021-01-29 04:17:35,429 Image generation requires the psutil package.
+
+Install using pip:
+    $ pip install psutil
+
+Install using conda:
+    $ conda install psutil
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/nanoplotter/plot.py", line 60, in save_static
+    pio.write_image(self.fig, self.path.replace('html', 'png'))
+  File "/usr/local/lib/python3.8/site-packages/plotly/io/_kaleido.py", line 244, in write_image
+    img_data = to_image(
+  File "/usr/local/lib/python3.8/site-packages/plotly/io/_kaleido.py", line 102, in to_image
+    return to_image_orca(
+  File "/usr/local/lib/python3.8/site-packages/plotly/io/_orca.py", line 1535, in to_image
+    ensure_server()
+  File "/usr/local/lib/python3.8/site-packages/plotly/io/_orca.py", line 1361, in ensure_server
+    raise ValueError(
+ValueError: Image generation requires the psutil package.
+
+Install using pip:
+    $ pip install psutil
+
+Install using conda:
+    $ conda install psutil
+
+2021-01-29 04:17:35,429 Created Percent ID vs Length plot
+2021-01-29 04:17:35,429 Writing html report.
+2021-01-29 04:17:42,358 Finished!

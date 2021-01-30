@@ -1,0 +1,103 @@
+Jan-29 02:39:27.262 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-test.nf -with-tower
+Jan-29 02:39:27.394 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.10.0
+Jan-29 02:39:27.407 [main] INFO  nextflow.cli.CmdRun - Launching `nf-test.nf` [hopeful_torvalds] - revision: 887f90c8ae
+Jan-29 02:39:27.429 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /scratch/bhargava/nextflow-test/nextflow.config
+Jan-29 02:39:27.429 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/bhargava/nextflow-test/nextflow.config
+Jan-29 02:39:27.448 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jan-29 02:39:28.015 [main] DEBUG nextflow.Session - Session uuid: d3ea4092-e3c1-45e3-895b-0fc5324e90d4
+Jan-29 02:39:28.015 [main] DEBUG nextflow.Session - Run name: hopeful_torvalds
+Jan-29 02:39:28.016 [main] DEBUG nextflow.Session - Executor pool size: 56
+Jan-29 02:39:28.023 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /scratch/bhargava/nextflow-test/nextflow.config
+Jan-29 02:39:28.023 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/bhargava/nextflow-test/nextflow.config
+Jan-29 02:39:28.024 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jan-29 02:39:28.105 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.10.0 build 5430
+  Created: 01-11-2020 15:14 UTC (02-11-2020 04:14 NZDT)
+  System: Linux 4.15.0-123-generic
+  Runtime: Groovy 3.0.5 on OpenJDK 64-Bit Server VM 11.0.8-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 29172@gru [127.0.1.1]
+  CPUs: 56 - Mem: 188.8 GB (155.8 GB) - Swap: 61 GB (56.1 GB)
+Jan-29 02:39:28.127 [main] DEBUG nextflow.Session - Work-dir: /scratch/bhargava/nextflow-test/work [ext2/ext3]
+Jan-29 02:39:28.128 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/bhargava/nextflow-test/bin
+Jan-29 02:39:28.159 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Jan-29 02:39:28.178 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jan-29 02:39:28.474 [main] DEBUG nextflow.Session - Session start invoked
+Jan-29 02:39:28.484 [main] DEBUG io.seqera.tower.plugin.TowerClient - Creating Tower observer -- endpoint=https://api.tower.nf; requestInterval=1s; aliveInterval=1m; maxRetries=5; backOffBase=3; backOffDelay=250
+Jan-29 02:39:30.702 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jan-29 02:39:30.721 [main] INFO  nextflow.Nextflow - R N A S E Q - N F   P I P E L I N E
+===================================
+reference        : /data/bhargava/reference_files/K12/K12a.fa
+reference_norrna : /data/bhargava/reference_files/K12/k12_norrna.fa
+reference_rrna   : /data/bhargava/reference_files/K12/k12_rrna.fa
+reads            : /scratch/bhargava/nextflow-test/data/*.fastq
+outdir           : results
+
+Jan-29 02:39:30.988 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: flagstat, minimap2rrna, minimap2norrna, depth2, bamprocess3, bamprocess2, bamindex, minimap2, depth, nanoplot, depth3, bamprocess, flagstat3, flagstat2
+Jan-29 02:39:31.062 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:minimap2` matches process minimap2
+Jan-29 02:39:31.070 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-29 02:39:31.070 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-29 02:39:31.074 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jan-29 02:39:31.079 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=56; memory=188.8 GB; capacity=56; pollInterval=100ms; dumpInterval=5m
+Jan-29 02:39:31.167 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:minimap2rrna` matches process minimap2rrna
+Jan-29 02:39:31.170 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-29 02:39:31.170 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-29 02:39:31.174 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:minimap2norrna` matches process minimap2norrna
+Jan-29 02:39:31.175 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-29 02:39:31.175 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-29 02:39:31.178 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:bamprocess` matches process bamprocess
+Jan-29 02:39:31.179 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-29 02:39:31.179 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-29 02:39:31.181 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:bamprocess` matches process bamprocess2
+Jan-29 02:39:31.182 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-29 02:39:31.182 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-29 02:39:31.185 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:bamprocess` matches process bamprocess3
+Jan-29 02:39:31.186 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-29 02:39:31.186 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-29 02:39:31.190 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:flagstat` matches process flagstat
+Jan-29 02:39:31.190 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-29 02:39:31.190 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-29 02:39:31.193 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:flagstat` matches process flagstat2
+Jan-29 02:39:31.195 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-29 02:39:31.195 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-29 02:39:31.199 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:flagstat` matches process flagstat3
+Jan-29 02:39:31.200 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-29 02:39:31.200 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-29 02:39:31.203 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-29 02:39:31.203 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-29 02:39:31.205 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-29 02:39:31.205 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-29 02:39:31.208 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-29 02:39:31.208 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-29 02:39:31.213 [main] DEBUG nextflow.Session - Session aborted -- Cause: No such property: publishDir for class: nextflow.script.ProcessDef
+Jan-29 02:39:31.244 [main] ERROR nextflow.cli.Launcher - @unknown
+groovy.lang.MissingPropertyException: No such property: publishDir for class: nextflow.script.ProcessDef
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:65)
+	at org.codehaus.groovy.runtime.callsite.GetEffectivePogoPropertySite.getProperty(GetEffectivePogoPropertySite.java:87)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:329)
+	at Script_0283fdaf$_runScript_closure5$_closure10.doCall(Script_0283fdaf:132)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1026)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:186)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:170)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:52)
+	at nextflow.script.ChainableDef$invoke_a.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.script.BaseScript.runDsl2(BaseScript.groovy:191)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:200)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:219)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:219)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:127)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:277)
+	at nextflow.cli.Launcher.run(Launcher.groovy:466)
+	at nextflow.cli.Launcher.main(Launcher.groovy:648)

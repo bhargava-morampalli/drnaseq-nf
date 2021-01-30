@@ -1,0 +1,20 @@
+2021-01-27 14:29:20,298 NanoPlot 1.30.0 started with arguments Namespace(N50=False, alength=False, bam=['sub1_full.sorted.bam'], barcoded=False, color='#4CB391', colormap='Greens', cram=None, downsample=None, dpi=100, drop_outliers=False, fasta=None, fastq=None, fastq_minimal=None, fastq_rich=None, font_scale=1, format='png', hide_stats=False, huge=False, listcolormaps=False, listcolors=False, loglength=False, maxlength=10000, minlength=None, minqual=None, no_N50=False, no_supplementary=False, outdir='sub1_full.sorted_*', path='sub1_full.sorted_*/sub1_full.sorted-', percentqual=False, pickle=None, plots=['hex', 'dot', 'kde', 'pauvre'], prefix='sub1_full.sorted-', raw=True, readtype='1D', runtime_until=None, store=True, summary=None, threads=40, title='sub1_full.sorted.bam', ubam=None, verbose=False)
+2021-01-27 14:29:20,299 Python version is: 3.7.6 | packaged by conda-forge | (default, Jun  1 2020, 18:57:50)  [GCC 7.5.0]
+2021-01-27 14:29:20,300 NanoPlot:  valid output format png
+2021-01-27 14:29:20,314 Nanoget: Starting to collect statistics from bam file sub1_full.sorted.bam.
+2021-01-27 14:29:20,425 Nanoget: No index for bam file could be found, created index.
+2021-01-27 14:29:20,425 Nanoget: Bam file sub1_full.sorted.bam contains 1388 mapped and 3622 unmapped reads.
+2021-01-27 14:29:20,796 Note: NumExpr detected 56 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2021-01-27 14:29:20,796 NumExpr defaulting to 8 threads.
+2021-01-27 14:29:20,819 Nanoget: bam sub1_full.sorted.bam contains 1388 primary alignments.
+2021-01-27 14:29:20,841 Reduced DataFrame memory usage from 0.19723129272460938Mb to 0.15619659423828125Mb
+2021-01-27 14:29:20,857 Nanoget: Gathered all metrics of 1388 reads
+2021-01-27 14:29:20,892 Note: NumExpr detected 56 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2021-01-27 14:29:20,892 NumExpr defaulting to 8 threads.
+2021-01-27 14:29:20,897 Calculated statistics
+2021-01-27 14:29:20,898 Using sequenced read lengths for plotting.
+2021-01-27 14:29:20,900 Hidding 0 reads longer than 10000bp in length plots.
+2021-01-27 14:29:20,903 NanoPlot:  Valid color #4CB391.
+2021-01-27 14:29:20,909 NanoPlot:  Valid colormap Greens.
+2021-01-27 14:29:20,910 NanoPlot:  Creating length plots for Read length.
+2021-01-27 14:29:20,910 NanoPlot:  Using 1388 reads maximum of 3219bp.

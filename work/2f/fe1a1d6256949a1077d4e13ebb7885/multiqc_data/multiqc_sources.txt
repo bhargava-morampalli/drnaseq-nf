@@ -1,0 +1,4 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	sample3_nf	/scratch/bhargava/nextflow-test/work/2f/fe1a1d6256949a1077d4e13ebb7885/fastqc_sample3_nf.fastq_logs/sample3_nf_fastqc.zip
+FastQC	all_sections	sample1_nf	/scratch/bhargava/nextflow-test/work/2f/fe1a1d6256949a1077d4e13ebb7885/fastqc_sample1_nf.fastq_logs/sample1_nf_fastqc.zip
+FastQC	all_sections	sample2_nf	/scratch/bhargava/nextflow-test/work/2f/fe1a1d6256949a1077d4e13ebb7885/fastqc_sample2_nf.fastq_logs/sample2_nf_fastqc.zip

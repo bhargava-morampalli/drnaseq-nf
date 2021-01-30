@@ -1,0 +1,104 @@
+process minimap2 {
+    tag "mapping $sample_id to the reference fasta file using minimap2"
+
+    input:
+    path reference from params.fasta
+    sample_id, path(reads) from reads2_ch
+
+    output:
+    path sample_id into sam_ch
+
+    script:
+    minimap2 -t 28 -ax map-ont --secondary=no $reference $sample_id > ${sample_id}.sam
+
+}
+
+process quantification {
+    tag "$pair_id"
+
+    input:
+    path index from index_ch
+    tuple pair_id, path(reads) from read_pairs_ch
+
+    output:
+    path pair_id into quant_ch
+
+    script:
+    """
+    salmon quant --threads $task.cpus --libType=U -i $index -1 ${reads[0]} -2 ${reads[1]} -o $pair_id
+    """
+}
+
+
+.into { reads_ch; reads2_ch; reads3_ch; reads4_ch }
+
+/* 
+ * Process: performing QC on fastq files using FASTQC
+*/
+
+process fastqc {
+    tag "FASTQC on $reads"
+
+    input:
+    path reads from reads_ch
+
+    output:
+    path "fastqc_${reads}_logs" into fastqc_ch
+
+
+    script:
+    """
+    mkdir fastqc_${reads}_logs
+    fastqc -o fastqc_${reads}_logs -f fastq -q ${reads}
+    """
+}
+
+/* 
+ * Process: combining FASTQC reports with MultiQC
+*/
+
+
+process multiqc {
+    publishDir params.outdir, mode:'copy'
+
+    input:
+    path '*' from fastqc_ch.collect()
+
+    output:
+    path 'multiqc_report.html'
+
+    script:
+    """
+    multiqc .
+    """
+}
+
+params.multiqc = "$baseDir/multiqc"
+
+
+params.reads = "$baseDir/data/*.fastq"
+
+Channel
+    .fromPath( params.reads, checkIfExists: true )
+    .into { reads_ch }
+
+input:
+path reads from reads_ch
+
+output:
+path "${reads}_full.sam" into sam_ch
+
+script:
+minimap2 -ax splice -uf -k14 --secondary=no $reference $reads > ${reads}_full.sam
+
+samtools view -S -b longreads1kb.sam > longreads1kb.bam
+samtools sort longreads1kb.bam -o longreads1kb.sorted.bam
+
+include { flagstat as flagstat2 } from './flagstat'
+include { flagstat as flagstat3 } from './flagstat'
+
+
+NanoPlot -t 40 --bam 20191008_K12_b21_rrna.sorted.bam -o /stats --plots hex dot kde pauvre --title "plot" --store --raw --maxlength 10000 -p K12-MG1655-b21-rrna-
+
+
+sub1_norrna.sorted.bam
