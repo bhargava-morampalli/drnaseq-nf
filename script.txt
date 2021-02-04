@@ -102,3 +102,5 @@ NanoPlot -t 40 --bam 20191008_K12_b21_rrna.sorted.bam -o /stats --plots hex dot 
 
 
 sub1_norrna.sorted.bam
+
+change this file to test git push from code
