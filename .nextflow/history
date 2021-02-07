@@ -99,3 +99,4 @@
 2021-01-29 03:09:56	14.7s	deadly_lamarck	ERR	6d3a75c23e7362e1650b70007d388491	7e4ed102-83b0-41c3-8078-4bf270d33109	nextflow run nf-test.nf -with-tower
 2021-01-29 04:17:03	35.6s	romantic_archimedes	ERR	8b70379299335bab4d9b16219572e683	7b0c293a-7a5e-46bd-aaf5-1df48100f0bc	nextflow run nf-test.nf -with-tower
 2021-01-29 04:21:40	39s	grave_easley	ERR	8b70379299335bab4d9b16219572e683	7b0c293a-7a5e-46bd-aaf5-1df48100f0bc	nextflow run nf-test.nf -with-tower -resume
+2021-02-04 15:43:17	44s	clever_lalande	ERR	8b70379299335bab4d9b16219572e683	7b0c293a-7a5e-46bd-aaf5-1df48100f0bc	nextflow run nf-test.nf -with-tower -resume

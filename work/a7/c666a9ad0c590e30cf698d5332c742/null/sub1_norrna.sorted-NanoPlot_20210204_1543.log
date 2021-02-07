@@ -1,0 +1,201 @@
+2021-02-04 15:43:30,999 NanoPlot 1.30.1 started with arguments Namespace(N50=False, alength=False, bam=['sub1_norrna.sorted.bam'], barcoded=False, color='#4CB391', colormap='Greens', cram=None, downsample=None, dpi=100, drop_outliers=False, fasta=None, fastq=None, fastq_minimal=None, fastq_rich=None, font_scale=1, format='png', hide_stats=False, huge=False, listcolormaps=False, listcolors=False, loglength=False, maxlength=10000, minlength=None, minqual=None, no_N50=False, no_supplementary=False, outdir='null/', path='null/sub1_norrna.sorted-', percentqual=False, pickle=None, plots=['hex', 'dot', 'kde'], prefix='sub1_norrna.sorted-', raw=True, readtype='1D', runtime_until=None, store=True, summary=None, threads=40, title='sub1_norrna.sorted.bam', ubam=None, verbose=False)
+2021-02-04 15:43:30,999 Python version is: 3.6.9 (default, Apr 18 2020, 01:56:04)  [GCC 8.4.0]
+2021-02-04 15:43:31,000 NanoPlot:  valid output format png
+2021-02-04 15:43:31,009 Nanoget: Starting to collect statistics from bam file sub1_norrna.sorted.bam.
+2021-02-04 15:43:31,091 Nanoget: No index for bam file could be found, created index.
+2021-02-04 15:43:31,092 Nanoget: Bam file sub1_norrna.sorted.bam contains 462 mapped and 4543 unmapped reads.
+2021-02-04 15:43:31,299 Nanoget: bam sub1_norrna.sorted.bam contains 462 primary alignments.
+2021-02-04 15:43:31,331 Reduced DataFrame memory usage from 0.06564903259277344Mb to 0.051990509033203125Mb
+2021-02-04 15:43:31,348 Nanoget: Gathered all metrics of 462 reads
+2021-02-04 15:43:31,374 Calculated statistics
+2021-02-04 15:43:31,375 Using sequenced read lengths for plotting.
+2021-02-04 15:43:31,379 Hidding 0 reads longer than 10000bp in length plots.
+2021-02-04 15:43:31,382 NanoPlot:  Valid color #4CB391.
+2021-02-04 15:43:31,382 NanoPlot:  Valid colormap Greens.
+2021-02-04 15:43:31,383 NanoPlot:  Creating length plots for Read length.
+2021-02-04 15:43:31,383 NanoPlot:  Using 462 reads maximum of 2664bp.
+2021-02-04 15:43:33,389 Nanoplotter: orca not found, not creating static image of html. See https://github.com/plotly/orca
+2021-02-04 15:43:33,389 
+The orca executable is required to export figures as static images,
+but it could not be found on the system path.
+
+Searched for executable 'orca' on the following path:
+    /usr/local/sbin
+    /usr/local/bin
+    /usr/sbin
+    /usr/bin
+    /sbin
+    /bin
+
+If you haven't installed orca yet, you can do so using conda as follows:
+
+    $ conda install -c plotly plotly-orca
+
+Alternatively, see other installation methods in the orca project README at
+https://github.com/plotly/orca
+
+After installation is complete, no further configuration should be needed.
+
+If you have installed orca, then for some reason plotly.py was unable to
+locate it. In this case, set the `plotly.io.orca.config.executable`
+property to the full path of your orca executable. For example:
+
+    >>> plotly.io.orca.config.executable = '/path/to/orca'
+
+After updating this executable property, try the export operation again.
+If it is successful then you may want to save this configuration so that it
+will be applied automatically in future sessions. You can do this as follows:
+
+    >>> plotly.io.orca.config.save()
+
+If you're still having trouble, feel free to ask for help on the forums at
+https://community.plot.ly/c/api/python
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nanoplotter/plot.py", line 60, in save_static
+    pio.write_image(self.fig, self.path.replace('html', 'png'))
+  File "/usr/local/lib/python3.6/dist-packages/plotly/io/_kaleido.py", line 251, in write_image
+    engine=engine,
+  File "/usr/local/lib/python3.6/dist-packages/plotly/io/_kaleido.py", line 108, in to_image
+    validate=validate,
+  File "/usr/local/lib/python3.6/dist-packages/plotly/io/_orca.py", line 1535, in to_image
+    ensure_server()
+  File "/usr/local/lib/python3.6/dist-packages/plotly/io/_orca.py", line 1390, in ensure_server
+    validate_executable()
+  File "/usr/local/lib/python3.6/dist-packages/plotly/io/_orca.py", line 1087, in validate_executable
+    instructions=install_location_instructions,
+ValueError: 
+The orca executable is required to export figures as static images,
+but it could not be found on the system path.
+
+Searched for executable 'orca' on the following path:
+    /usr/local/sbin
+    /usr/local/bin
+    /usr/sbin
+    /usr/bin
+    /sbin
+    /bin
+
+If you haven't installed orca yet, you can do so using conda as follows:
+
+    $ conda install -c plotly plotly-orca
+
+Alternatively, see other installation methods in the orca project README at
+https://github.com/plotly/orca
+
+After installation is complete, no further configuration should be needed.
+
+If you have installed orca, then for some reason plotly.py was unable to
+locate it. In this case, set the `plotly.io.orca.config.executable`
+property to the full path of your orca executable. For example:
+
+    >>> plotly.io.orca.config.executable = '/path/to/orca'
+
+After updating this executable property, try the export operation again.
+If it is successful then you may want to save this configuration so that it
+will be applied automatically in future sessions. You can do this as follows:
+
+    >>> plotly.io.orca.config.save()
+
+If you're still having trouble, feel free to ask for help on the forums at
+https://community.plot.ly/c/api/python
+
+2021-02-04 15:43:33,699 Created length plots
+2021-02-04 15:43:33,701 NanoPlot:  Creating Read lengths vs Average read quality plots using statistics from 462 reads.
+2021-02-04 15:43:36,306 Created LengthvsQual plot
+2021-02-04 15:43:36,308 NanoPlot:  Creating Aligned read lengths vs Sequenced read length plots using statistics from 462 reads.
+2021-02-04 15:43:38,634 Created AlignedLength vs Length plot.
+2021-02-04 15:43:38,634 NanoPlot:  Creating Read mapping quality vs Average basecall quality plots using statistics from 462 reads.
+2021-02-04 15:43:40,707 Created MapQvsBaseQ plot.
+2021-02-04 15:43:40,709 NanoPlot:  Creating Read length vs Read mapping quality plots using statistics from 462 reads.
+2021-02-04 15:43:42,890 Created Mapping quality vs read length plot.
+2021-02-04 15:43:42,891 NanoPlot:  Creating Percent identity vs Average Base Quality plots using statistics from 462 reads.
+2021-02-04 15:43:45,287 Created Percent ID vs Base quality plot.
+2021-02-04 15:43:45,289 NanoPlot:  Creating Aligned read length vs Percent identity plots using statistics from 462 reads.
+2021-02-04 15:43:47,530 Nanoplotter: orca not found, not creating static image of html. See https://github.com/plotly/orca
+2021-02-04 15:43:47,530 
+The orca executable is required to export figures as static images,
+but it could not be found on the system path.
+
+Searched for executable 'orca' on the following path:
+    /usr/local/sbin
+    /usr/local/bin
+    /usr/sbin
+    /usr/bin
+    /sbin
+    /bin
+
+If you haven't installed orca yet, you can do so using conda as follows:
+
+    $ conda install -c plotly plotly-orca
+
+Alternatively, see other installation methods in the orca project README at
+https://github.com/plotly/orca
+
+After installation is complete, no further configuration should be needed.
+
+If you have installed orca, then for some reason plotly.py was unable to
+locate it. In this case, set the `plotly.io.orca.config.executable`
+property to the full path of your orca executable. For example:
+
+    >>> plotly.io.orca.config.executable = '/path/to/orca'
+
+After updating this executable property, try the export operation again.
+If it is successful then you may want to save this configuration so that it
+will be applied automatically in future sessions. You can do this as follows:
+
+    >>> plotly.io.orca.config.save()
+
+If you're still having trouble, feel free to ask for help on the forums at
+https://community.plot.ly/c/api/python
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nanoplotter/plot.py", line 60, in save_static
+    pio.write_image(self.fig, self.path.replace('html', 'png'))
+  File "/usr/local/lib/python3.6/dist-packages/plotly/io/_kaleido.py", line 251, in write_image
+    engine=engine,
+  File "/usr/local/lib/python3.6/dist-packages/plotly/io/_kaleido.py", line 108, in to_image
+    validate=validate,
+  File "/usr/local/lib/python3.6/dist-packages/plotly/io/_orca.py", line 1535, in to_image
+    ensure_server()
+  File "/usr/local/lib/python3.6/dist-packages/plotly/io/_orca.py", line 1390, in ensure_server
+    validate_executable()
+  File "/usr/local/lib/python3.6/dist-packages/plotly/io/_orca.py", line 1087, in validate_executable
+    instructions=install_location_instructions,
+ValueError: 
+The orca executable is required to export figures as static images,
+but it could not be found on the system path.
+
+Searched for executable 'orca' on the following path:
+    /usr/local/sbin
+    /usr/local/bin
+    /usr/sbin
+    /usr/bin
+    /sbin
+    /bin
+
+If you haven't installed orca yet, you can do so using conda as follows:
+
+    $ conda install -c plotly plotly-orca
+
+Alternatively, see other installation methods in the orca project README at
+https://github.com/plotly/orca
+
+After installation is complete, no further configuration should be needed.
+
+If you have installed orca, then for some reason plotly.py was unable to
+locate it. In this case, set the `plotly.io.orca.config.executable`
+property to the full path of your orca executable. For example:
+
+    >>> plotly.io.orca.config.executable = '/path/to/orca'
+
+After updating this executable property, try the export operation again.
+If it is successful then you may want to save this configuration so that it
+will be applied automatically in future sessions. You can do this as follows:
+
+    >>> plotly.io.orca.config.save()
+
+If you're still having trouble, feel free to ask for help on the forums at
+https://community.plot.ly/c/api/python
+
+2021-02-04 15:43:47,531 Created Percent ID vs Length plot
+2021-02-04 15:43:47,531 Writing html report.
+2021-02-04 15:43:57,658 Finished!
