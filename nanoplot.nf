@@ -6,11 +6,11 @@ process nanoplot {
     path bams
 
     output:
-    path "${bams.baseName}-*", emit: stats
+    path "${bams.baseName}-*.{png, html, txt, log}", emit: stats
 
     script:
     """
-    NanoPlot -t 40 --bam $bams -o ${bams.Parent}/ --plots hex dot kde --title "${bams}" --store --raw --maxlength 10000 -p ${bams.baseName}-
+    NanoPlot -t 40 --bam $bams --plots hex dot kde --title "${bams}" --store --maxlength 10000 -p ${bams.baseName}-
     """
 
 }

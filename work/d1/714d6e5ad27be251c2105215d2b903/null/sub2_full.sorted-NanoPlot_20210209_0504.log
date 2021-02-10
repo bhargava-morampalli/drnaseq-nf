@@ -1,0 +1,31 @@
+2021-02-09 05:04:22,857 NanoPlot 1.33.0 started with arguments Namespace(N50=False, alength=False, bam=['sub2_full.sorted.bam'], barcoded=False, color='#4CB391', colormap='Greens', cram=None, downsample=None, dpi=100, drop_outliers=False, fasta=None, fastq=None, fastq_minimal=None, fastq_rich=None, feather=None, font_scale=1, format='png', hide_stats=False, huge=False, listcolormaps=False, listcolors=False, loglength=False, maxlength=10000, minlength=None, minqual=None, no_N50=False, no_supplementary=False, outdir='null/', path='null/sub2_full.sorted-', percentqual=False, pickle=None, plots=['hex', 'dot', 'kde'], prefix='sub2_full.sorted-', raw=True, readtype='1D', runtime_until=None, store=True, summary=None, threads=40, title='sub2_full.sorted.bam', tsv_stats=False, ubam=None, verbose=False)
+2021-02-09 05:04:22,857 Python version is: 3.6.9 (default, Jul 17 2020, 12:50:27)  [GCC 8.4.0]
+2021-02-09 05:04:22,860 NanoPlot:  valid output format png
+2021-02-09 05:04:22,872 Nanoget: Starting to collect statistics from bam file sub2_full.sorted.bam.
+2021-02-09 05:04:23,006 Nanoget: No index for bam file could be found, created index.
+2021-02-09 05:04:23,008 Nanoget: Bam file sub2_full.sorted.bam contains 2442 mapped and 2564 unmapped reads.
+2021-02-09 05:04:23,512 Nanoget: bam sub2_full.sorted.bam contains 2442 primary alignments.
+2021-02-09 05:04:23,547 Reduced DataFrame memory usage from 0.3470020294189453Mb to 0.2748069763183594Mb
+2021-02-09 05:04:23,564 Nanoget: Gathered all metrics of 2442 reads
+2021-02-09 05:04:23,618 Calculated statistics
+2021-02-09 05:04:23,619 Using sequenced read lengths for plotting.
+2021-02-09 05:04:23,622 Hidding 0 reads longer than 10000bp in length plots.
+2021-02-09 05:04:23,625 NanoPlot:  Valid color #4CB391.
+2021-02-09 05:04:23,625 NanoPlot:  Valid colormap Greens.
+2021-02-09 05:04:23,626 NanoPlot:  Creating length plots for Read length.
+2021-02-09 05:04:23,626 NanoPlot:  Using 2442 reads maximum of 4774bp.
+2021-02-09 05:04:27,956 Created length plots
+2021-02-09 05:04:27,958 NanoPlot:  Creating Read lengths vs Average read quality plots using statistics from 2442 reads.
+2021-02-09 05:04:31,337 Created LengthvsQual plot
+2021-02-09 05:04:31,339 NanoPlot:  Creating Aligned read lengths vs Sequenced read length plots using statistics from 2442 reads.
+2021-02-09 05:04:34,636 Created AlignedLength vs Length plot.
+2021-02-09 05:04:34,637 NanoPlot:  Creating Read mapping quality vs Average basecall quality plots using statistics from 2442 reads.
+2021-02-09 05:04:37,933 Created MapQvsBaseQ plot.
+2021-02-09 05:04:37,935 NanoPlot:  Creating Read length vs Read mapping quality plots using statistics from 2442 reads.
+2021-02-09 05:04:41,084 Created Mapping quality vs read length plot.
+2021-02-09 05:04:41,084 NanoPlot:  Creating Percent identity vs Average Base Quality plots using statistics from 2442 reads.
+2021-02-09 05:04:44,548 Created Percent ID vs Base quality plot.
+2021-02-09 05:04:44,550 NanoPlot:  Creating Aligned read length vs Percent identity plots using statistics from 2442 reads.
+2021-02-09 05:04:48,773 Created Percent ID vs Length plot
+2021-02-09 05:04:48,774 Writing html report.
+2021-02-09 05:05:03,540 Finished!

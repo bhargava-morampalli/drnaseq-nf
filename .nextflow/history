@@ -100,3 +100,9 @@
 2021-01-29 04:17:03	35.6s	romantic_archimedes	ERR	8b70379299335bab4d9b16219572e683	7b0c293a-7a5e-46bd-aaf5-1df48100f0bc	nextflow run nf-test.nf -with-tower
 2021-01-29 04:21:40	39s	grave_easley	ERR	8b70379299335bab4d9b16219572e683	7b0c293a-7a5e-46bd-aaf5-1df48100f0bc	nextflow run nf-test.nf -with-tower -resume
 2021-02-04 15:43:17	44s	clever_lalande	ERR	8b70379299335bab4d9b16219572e683	7b0c293a-7a5e-46bd-aaf5-1df48100f0bc	nextflow run nf-test.nf -with-tower -resume
+2021-02-08 06:37:20	-	mad_fermi	-	7833f68b325280cb74e3864030e2229f	b617da29-1349-4476-a1d2-c79ab02716df	nextflow run separatereads.nf
+2021-02-08 06:38:03	-	determined_cray	-	edfb198275592e233148efc33630d63e	6caeb2a3-cdf7-4d65-b498-52a77b5d5add	nextflow run separatereads.nf
+2021-02-08 06:49:52	-	agitated_elion	-	2d4a8ca5cf9b321b2604c339c056dbb8	c04a7959-0f85-4253-897e-dc0002f1a8d0	nextflow run separatereads.nf
+2021-02-09 05:04:10	54.7s	jovial_tuckerman	ERR	ad0a3e5747b94750aab9710549e898af	c9ab4dbc-6b31-427e-948b-a25eab1638b4	nextflow run main.nf --with-tower
+2021-02-09 05:29:27	10.2s	distraught_hoover	ERR	ad0a3e5747b94750aab9710549e898af	f14d5abf-f885-4ca0-a0a1-3fba30e63f33	nextflow run main.nf --with-tower --resume
+2021-02-09 05:33:32	55.6s	wise_leavitt	OK	ad0a3e5747b94750aab9710549e898af	138f2509-5aa9-4013-bed7-9d0712e21e0b	nextflow run main.nf --with-tower --resume
