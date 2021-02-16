@@ -1,10 +1,6 @@
-
-params.mapped = "results/mapped"
-params.sams = "results/sams"
-
 process separatereads {
 
-    publishDir params.intersams, mode:'copy'
+    publishDir params.intersams, mode:'copy', pattern: '*.sam'
     publishDir params.mappedlists, mode:'copy', pattern: '*_ids.lst'
     publishDir params.mappedfastqs, mode:'copy', pattern: '*mapped.fastq'
     publishDir params.unmappedfastqs, mode:'copy', pattern: '*unmapped.fastq'
@@ -30,14 +26,4 @@ process separatereads {
     seqtk subseq ${reads.baseName}.fastq ${sams.baseName}.mapped_ids.lst > ${sams.baseName}_mapped.fastq
     seqtk subseq ${reads.baseName}.fastq ${sams.baseName}.unmapped_ids.lst > ${sams.baseName}_unmapped.fastq
     """
-}
-
-workflow {
-    
-    Channel
-    .fromPath(params.sams, checkIfExists: true)
-    .set { sams }
-
-    separatereads {sams}
-
 }

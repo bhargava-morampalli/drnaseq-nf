@@ -13,6 +13,10 @@ params.bams = "results/bams"
 params.flagstat = "results/flagstat"
 params.depth = "results/depth"
 params.nanoplot_stats = "results/nanoplot_stats"
+params.intersams = "results/sams-intermediate"
+params.mappedlists = "results/mappedlists"
+params.mappedfastqs = "results/mappedfastqs"
+params.unmappedfastqs = "results/unmappedfastqs"
 
 log.info """\
          R N A S E Q - N F   P I P E L I N E
