@@ -106,3 +106,9 @@ sub1_norrna.sorted.bam
 change this file to test git push from code
 
  -o ${bams.Parent}/${bams.baseName}-*.{png, html, txt, log}
+
+
+ withName:nanoplot {
+        container = 'file:///data/bhargava/containers/nanoplot.1.33.sif'
+
+include { separatereads } from './separatereads'

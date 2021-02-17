@@ -105,7 +105,6 @@ include { depth } from './depth'
 include { nanoplot } from './nanoplot'
 include { bamindex } from './bamindex'
 
-
 workflow {
     
     reference = params.reference
@@ -125,7 +124,6 @@ workflow {
     Channel
     .fromPath(params.samscombined, checkIfExists: true)
     .set { samscombined }
-
 
     bamprocess (samscombined)
     

@@ -106,3 +106,7 @@
 2021-02-09 05:04:10	54.7s	jovial_tuckerman	ERR	ad0a3e5747b94750aab9710549e898af	c9ab4dbc-6b31-427e-948b-a25eab1638b4	nextflow run main.nf --with-tower
 2021-02-09 05:29:27	10.2s	distraught_hoover	ERR	ad0a3e5747b94750aab9710549e898af	f14d5abf-f885-4ca0-a0a1-3fba30e63f33	nextflow run main.nf --with-tower --resume
 2021-02-09 05:33:32	55.6s	wise_leavitt	OK	ad0a3e5747b94750aab9710549e898af	138f2509-5aa9-4013-bed7-9d0712e21e0b	nextflow run main.nf --with-tower --resume
+2021-02-17 14:00:56	-	jovial_caravaggio	-	cac6808d586a31739e62e5bfe28d3848	cbdbafc0-0ecf-4565-95ad-c7d5d0090b84	nextflow run main.nf
+2021-02-17 14:01:39	4.2s	sleepy_kilby	ERR	395db1944b3c56d82918a0dcc747e423	d99f20b4-0381-4d01-91db-4598e63fd4ba	nextflow run main.nf
+2021-02-17 14:03:00	4.7s	reverent_jones	ERR	395db1944b3c56d82918a0dcc747e423	8d304817-a24d-4381-a5e2-5adbf5e62884	nextflow run main.nf
+2021-02-17 14:03:49	4.2s	chaotic_kalman	ERR	373b722aebc1313c5122cacfd8f5343f	0dc8fd5e-3153-4cef-bfb4-34b34dfdd8e4	nextflow run main.nf
