@@ -110,3 +110,15 @@
 2021-02-17 14:01:39	4.2s	sleepy_kilby	ERR	395db1944b3c56d82918a0dcc747e423	d99f20b4-0381-4d01-91db-4598e63fd4ba	nextflow run main.nf
 2021-02-17 14:03:00	4.7s	reverent_jones	ERR	395db1944b3c56d82918a0dcc747e423	8d304817-a24d-4381-a5e2-5adbf5e62884	nextflow run main.nf
 2021-02-17 14:03:49	4.2s	chaotic_kalman	ERR	373b722aebc1313c5122cacfd8f5343f	0dc8fd5e-3153-4cef-bfb4-34b34dfdd8e4	nextflow run main.nf
+2021-02-17 14:22:26	3.8s	mad_northcutt	ERR	efd8308f7cf54a1cb7990b6ffa9ab8e7	43db0687-7639-4f1c-b157-81e4522d8b47	nextflow run main.nf
+2021-02-17 14:28:48	4.1s	zen_albattani	ERR	d10ce17da22f30b1c42dbf486b610ffe	2d83eaaf-e873-4583-a258-f3611a8ca932	nextflow run main.nf
+2021-02-17 14:29:52	-	nice_agnesi	-	1f9356c253a633b3a0b80bb311e007f4	c8bea00d-0232-4217-a17b-36ae41312792	nextflow run main.nf
+2021-02-17 14:30:34	4.3s	nostalgic_stone	ERR	833f3ff7b5e1cf9c453a3cd60e99e7e6	15089f69-03ae-4de8-8d2a-affabaded5f4	nextflow run main.nf
+2021-02-17 14:33:30	8.3s	clever_goodall	OK	02092e2e99c486567a4564349dc33936	a26aaeec-17e8-49da-8641-c3a4f87ea3e8	nextflow run main.nf
+2021-02-17 14:36:34	56.1s	focused_watson	OK	02092e2e99c486567a4564349dc33936	a26aaeec-17e8-49da-8641-c3a4f87ea3e8	nextflow run main.nf -resume
+2021-02-17 14:50:04	6.2s	extravagant_nightingale	ERR	d61872ef64002ee3061e9f66c8d9b6a0	a26aaeec-17e8-49da-8641-c3a4f87ea3e8	nextflow run main.nf -resume
+2021-02-17 14:51:02	6.7s	backstabbing_jang	OK	1217fa0d49d398e4ec8b7f51e1af57ed	a26aaeec-17e8-49da-8641-c3a4f87ea3e8	nextflow run main.nf -resume
+2021-02-17 14:55:02	55.4s	cranky_kowalevski	OK	9f0ebdc7faef788721ed1ce46dc2582d	aade5ac8-c457-458e-b4f4-80b5330f2946	nextflow run main.nf
+2021-02-17 14:56:39	9.2s	cheesy_shirley	OK	9f0ebdc7faef788721ed1ce46dc2582d	644cce4d-af4e-425f-81e4-3a0268704b70	nextflow run main.nf
+2021-02-17 15:00:12	9s	distracted_yonath	OK	9f0ebdc7faef788721ed1ce46dc2582d	89bc9c80-e685-4960-a487-e631850f3996	nextflow run main.nf
+2021-02-17 19:31:57	54.8s	mad_woese	OK	9f0ebdc7faef788721ed1ce46dc2582d	89bc9c80-e685-4960-a487-e631850f3996	nextflow run main.nf -resume

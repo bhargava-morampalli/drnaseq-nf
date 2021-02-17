@@ -2,8 +2,8 @@ process separatereads {
 
     publishDir params.intersams, mode:'copy', pattern: '*.sam'
     publishDir params.mappedlists, mode:'copy', pattern: '*_ids.lst'
-    publishDir params.mappedfastqs, mode:'copy', pattern: '*mapped.fastq'
-    publishDir params.unmappedfastqs, mode:'copy', pattern: '*unmapped.fastq'
+    publishDir params.mappedfastqs, mode:'copy', pattern: '*_mapped.fastq'
+    publishDir params.unmappedfastqs, mode:'copy', pattern: '*_unmapped.fastq'
 
     input:
     path sams

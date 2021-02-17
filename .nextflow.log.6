@@ -1,28 +1,28 @@
-Feb-09 05:33:31.594 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --with-tower --resume
-Feb-09 05:33:31.719 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.10.0
-Feb-09 05:33:31.730 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [wise_leavitt] - revision: ad0a3e5747
-Feb-09 05:33:31.751 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /scratch/bhargava/workflows/drnaseq-nf/nextflow.config
-Feb-09 05:33:31.752 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/bhargava/workflows/drnaseq-nf/nextflow.config
-Feb-09 05:33:31.774 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Feb-09 05:33:32.380 [main] DEBUG nextflow.Session - Session uuid: 138f2509-5aa9-4013-bed7-9d0712e21e0b
-Feb-09 05:33:32.381 [main] DEBUG nextflow.Session - Run name: wise_leavitt
-Feb-09 05:33:32.381 [main] DEBUG nextflow.Session - Executor pool size: 56
-Feb-09 05:33:32.408 [main] DEBUG nextflow.cli.CmdRun - 
+Feb-17 14:36:33.874 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -resume
+Feb-17 14:36:34.004 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.10.0
+Feb-17 14:36:34.016 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [focused_watson] - revision: 02092e2e99
+Feb-17 14:36:34.038 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /scratch/bhargava/workflows/drnaseq-nf/nextflow.config
+Feb-17 14:36:34.039 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/bhargava/workflows/drnaseq-nf/nextflow.config
+Feb-17 14:36:34.060 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Feb-17 14:36:34.670 [main] DEBUG nextflow.Session - Session uuid: a26aaeec-17e8-49da-8641-c3a4f87ea3e8
+Feb-17 14:36:34.670 [main] DEBUG nextflow.Session - Run name: focused_watson
+Feb-17 14:36:34.671 [main] DEBUG nextflow.Session - Executor pool size: 56
+Feb-17 14:36:34.700 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 20.10.0 build 5430
   Created: 01-11-2020 15:14 UTC (02-11-2020 04:14 NZDT)
   System: Linux 4.15.0-123-generic
   Runtime: Groovy 3.0.5 on OpenJDK 64-Bit Server VM 11.0.8-internal+0-adhoc..src
   Encoding: UTF-8 (UTF-8)
-  Process: 7455@gru [127.0.1.1]
-  CPUs: 56 - Mem: 188.8 GB (7.8 GB) - Swap: 61 GB (57.7 GB)
-Feb-09 05:33:32.433 [main] DEBUG nextflow.Session - Work-dir: /scratch/bhargava/workflows/drnaseq-nf/work [ext2/ext3]
-Feb-09 05:33:32.434 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/bhargava/workflows/drnaseq-nf/bin
-Feb-09 05:33:32.506 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
-Feb-09 05:33:32.530 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Feb-09 05:33:32.825 [main] DEBUG nextflow.Session - Session start invoked
-Feb-09 05:33:32.848 [main] DEBUG io.seqera.tower.plugin.TowerClient - Creating Tower observer -- endpoint=https://api.tower.nf; requestInterval=1s; aliveInterval=1m; maxRetries=5; backOffBase=3; backOffDelay=250
-Feb-09 05:33:35.841 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Feb-09 05:33:35.868 [main] INFO  nextflow.Nextflow - R N A S E Q - N F   P I P E L I N E
+  Process: 32779@gru [127.0.1.1]
+  CPUs: 56 - Mem: 188.8 GB (39.7 GB) - Swap: 61 GB (55.3 GB)
+Feb-17 14:36:34.765 [main] DEBUG nextflow.Session - Work-dir: /scratch/bhargava/workflows/drnaseq-nf/work [ext2/ext3]
+Feb-17 14:36:34.766 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/bhargava/workflows/drnaseq-nf/bin
+Feb-17 14:36:34.821 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Feb-17 14:36:34.846 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Feb-17 14:36:35.180 [main] DEBUG nextflow.Session - Session start invoked
+Feb-17 14:36:35.201 [main] DEBUG io.seqera.tower.plugin.TowerClient - Creating Tower observer -- endpoint=https://api.tower.nf; requestInterval=1s; aliveInterval=1m; maxRetries=5; backOffBase=3; backOffDelay=250
+Feb-17 14:36:37.145 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-17 14:36:37.166 [main] INFO  nextflow.Nextflow - R N A S E Q - N F   P I P E L I N E
 ===================================
 reference        : /data/bhargava/reference_files/K12/K12a.fa
 reference_norrna : /data/bhargava/reference_files/K12/k12_norrna.fa
@@ -30,215 +30,197 @@ reference_rrna   : /data/bhargava/reference_files/K12/k12_rrna.fa
 reads            : /scratch/bhargava/workflows/drnaseq-nf/data/*.fastq
 outdir           : results
 
-Feb-09 05:33:36.131 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: flagstat, minimap2rrna, minimap2, depth, minimap2norrna, nanoplot, bamprocess, bamindex
-Feb-09 05:33:36.245 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:minimap2` matches process minimap2
-Feb-09 05:33:36.253 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Feb-09 05:33:36.253 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Feb-09 05:33:36.257 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Feb-09 05:33:36.261 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=56; memory=188.8 GB; capacity=56; pollInterval=100ms; dumpInterval=5m
-Feb-09 05:33:36.354 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:minimap2rrna` matches process minimap2rrna
-Feb-09 05:33:36.356 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Feb-09 05:33:36.356 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Feb-09 05:33:36.360 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:minimap2norrna` matches process minimap2norrna
-Feb-09 05:33:36.362 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Feb-09 05:33:36.362 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Feb-09 05:33:36.367 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:bamprocess` matches process bamprocess
-Feb-09 05:33:36.367 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Feb-09 05:33:36.367 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Feb-09 05:33:36.370 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:flagstat` matches process flagstat
-Feb-09 05:33:36.371 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Feb-09 05:33:36.371 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Feb-09 05:33:36.375 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Feb-09 05:33:36.376 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Feb-09 05:33:36.380 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Feb-09 05:33:36.380 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Feb-09 05:33:36.387 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:nanoplot` matches process nanoplot
-Feb-09 05:33:36.387 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Feb-09 05:33:36.387 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Feb-09 05:33:36.829 [main] INFO  io.seqera.tower.plugin.TowerClient - Monitor the execution with Nextflow Tower using this url https://tower.nf/watch/3tk6wFKe1EU0xc
-Feb-09 05:33:36.834 [main] DEBUG nextflow.Session - Ignite dataflow network (11)
-Feb-09 05:33:36.846 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > minimap2
-Feb-09 05:33:36.847 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > minimap2rrna
-Feb-09 05:33:36.848 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > minimap2norrna
-Feb-09 05:33:36.851 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bamprocess
-Feb-09 05:33:36.853 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > flagstat
-Feb-09 05:33:36.853 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > depth
-Feb-09 05:33:36.855 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bamindex
-Feb-09 05:33:36.855 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > nanoplot
-Feb-09 05:33:36.856 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
-Feb-09 05:33:36.857 [main] DEBUG nextflow.Session - Session await
-Feb-09 05:33:36.858 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /scratch/bhargava/workflows/drnaseq-nf/data/; pattern: *.fastq; options: [checkIfExists:true]
-Feb-09 05:33:36.858 [PathVisitor-2] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /scratch/bhargava/workflows/drnaseq-nf/data/; pattern: *.fastq; options: [checkIfExists:true]
-Feb-09 05:33:36.858 [PathVisitor-3] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /scratch/bhargava/workflows/drnaseq-nf/results/sams/; pattern: *.sam; options: [checkIfExists:true]
-Feb-09 05:33:37.186 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.191 [Task submitter] INFO  nextflow.Session - [a3/fdb165] Submitted process > bamprocess (1)
-Feb-09 05:33:37.203 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.204 [Task submitter] INFO  nextflow.Session - [9d/7ec756] Submitted process > minimap2norrna (1)
-Feb-09 05:33:37.215 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.215 [Task submitter] INFO  nextflow.Session - [e3/a27378] Submitted process > bamprocess (9)
-Feb-09 05:33:37.220 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.220 [Task submitter] INFO  nextflow.Session - [2b/4b1908] Submitted process > bamprocess (7)
-Feb-09 05:33:37.225 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.225 [Task submitter] INFO  nextflow.Session - [7c/1175b9] Submitted process > minimap2rrna (2)
-Feb-09 05:33:37.231 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.231 [Task submitter] INFO  nextflow.Session - [86/81d7bb] Submitted process > minimap2 (1)
-Feb-09 05:33:37.236 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.237 [Task submitter] INFO  nextflow.Session - [47/1d0bea] Submitted process > minimap2 (3)
-Feb-09 05:33:37.242 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.243 [Task submitter] INFO  nextflow.Session - [2a/9ae18b] Submitted process > bamprocess (2)
-Feb-09 05:33:37.249 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.250 [Task submitter] INFO  nextflow.Session - [16/8bc076] Submitted process > bamprocess (6)
-Feb-09 05:33:37.260 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.261 [Task submitter] INFO  nextflow.Session - [20/f7f390] Submitted process > minimap2rrna (3)
-Feb-09 05:33:37.266 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.267 [Task submitter] INFO  nextflow.Session - [eb/1d77ea] Submitted process > minimap2norrna (2)
-Feb-09 05:33:37.272 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.273 [Task submitter] INFO  nextflow.Session - [38/1f9652] Submitted process > minimap2 (2)
-Feb-09 05:33:37.277 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.278 [Task submitter] INFO  nextflow.Session - [eb/f557a4] Submitted process > bamprocess (4)
-Feb-09 05:33:37.283 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.284 [Task submitter] INFO  nextflow.Session - [06/39e629] Submitted process > minimap2rrna (1)
-Feb-09 05:33:37.290 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.290 [Task submitter] INFO  nextflow.Session - [1a/028a8c] Submitted process > bamprocess (8)
-Feb-09 05:33:37.297 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.298 [Task submitter] INFO  nextflow.Session - [cd/8592cb] Submitted process > bamprocess (3)
-Feb-09 05:33:37.308 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.309 [Task submitter] INFO  nextflow.Session - [89/387872] Submitted process > minimap2norrna (3)
-Feb-09 05:33:37.313 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:37.314 [Task submitter] INFO  nextflow.Session - [cf/45cd27] Submitted process > bamprocess (5)
-Feb-09 05:33:38.350 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: bamprocess (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/a3/fdb165eec28d875b9125d594ccb7b2]
-Feb-09 05:33:38.381 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=168; maxQueueSize=504; keepAlive=1m
-Feb-09 05:33:38.383 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.384 [Task submitter] INFO  nextflow.Session - [44/b5e671] Submitted process > bamindex (1)
-Feb-09 05:33:38.388 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.388 [Task submitter] INFO  nextflow.Session - [d7/f65d3d] Submitted process > flagstat (1)
-Feb-09 05:33:38.394 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.394 [Task submitter] INFO  nextflow.Session - [9f/e4a2f6] Submitted process > nanoplot (1)
-Feb-09 05:33:38.398 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.398 [Task submitter] INFO  nextflow.Session - [55/6214f3] Submitted process > depth (1)
-Feb-09 05:33:38.621 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: depth (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/55/6214f3568df4b9173453d1ffbb140f]
-Feb-09 05:33:38.647 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: bamprocess (9); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/e3/a273788e3c5fc980a44b8c1a849e11]
-Feb-09 05:33:38.662 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.662 [Task submitter] INFO  nextflow.Session - [57/918f03] Submitted process > flagstat (2)
-Feb-09 05:33:38.667 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.667 [Task submitter] INFO  nextflow.Session - [03/6e0777] Submitted process > nanoplot (2)
-Feb-09 05:33:38.671 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.671 [Task submitter] INFO  nextflow.Session - [7e/43a24a] Submitted process > depth (2)
-Feb-09 05:33:38.675 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.676 [Task submitter] INFO  nextflow.Session - [61/97d44d] Submitted process > bamindex (2)
-Feb-09 05:33:38.686 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: bamprocess (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/2a/9ae18bcbfdb755dc246abfe872bd41]
-Feb-09 05:33:38.699 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.700 [Task submitter] INFO  nextflow.Session - [06/4c2116] Submitted process > flagstat (3)
-Feb-09 05:33:38.704 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.706 [Task submitter] INFO  nextflow.Session - [12/c82c0b] Submitted process > depth (3)
-Feb-09 05:33:38.706 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: bamindex (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/44/b5e671e0418db0a515dcddff7e1aed]
-Feb-09 05:33:38.712 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.712 [Task submitter] INFO  nextflow.Session - [f8/f1ec93] Submitted process > nanoplot (3)
-Feb-09 05:33:38.716 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.717 [Task submitter] INFO  nextflow.Session - [14/26c194] Submitted process > bamindex (3)
-Feb-09 05:33:38.731 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: bamprocess (7); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/2b/4b19084a37b51c062814c268b259fa]
-Feb-09 05:33:38.750 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.759 [Task submitter] INFO  nextflow.Session - [d3/a20388] Submitted process > flagstat (4)
-Feb-09 05:33:38.765 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.766 [Task submitter] INFO  nextflow.Session - [69/02b8c8] Submitted process > nanoplot (4)
-Feb-09 05:33:38.770 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.772 [Task submitter] INFO  nextflow.Session - [53/47739e] Submitted process > depth (4)
-Feb-09 05:33:38.776 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: bamprocess (6); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/16/8bc076a5a6fb77bfc65f3b9b80632a]
-Feb-09 05:33:38.778 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.781 [Task submitter] INFO  nextflow.Session - [6f/0f7888] Submitted process > bamindex (4)
-Feb-09 05:33:38.789 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.790 [Task submitter] INFO  nextflow.Session - [b4/3f58e4] Submitted process > depth (5)
-Feb-09 05:33:38.798 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.800 [Task submitter] INFO  nextflow.Session - [93/e08a8a] Submitted process > nanoplot (5)
-Feb-09 05:33:38.804 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.805 [Task submitter] INFO  nextflow.Session - [64/221e4e] Submitted process > bamindex (5)
-Feb-09 05:33:38.810 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.823 [Task submitter] INFO  nextflow.Session - [ca/9f642f] Submitted process > flagstat (5)
-Feb-09 05:33:38.923 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: bamprocess (5); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/cf/45cd274976e21b85f6455915077291]
-Feb-09 05:33:38.937 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:38.942 [Task submitter] INFO  nextflow.Session - [08/8be642] Submitted process > nanoplot (6)
-Feb-09 05:33:38.998 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: minimap2rrna (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/06/39e629b282b6d4a3b12d74e7684104]
-Feb-09 05:33:39.010 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: bamindex (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/61/97d44d2b78c5fbd6d1784747143863]
-Feb-09 05:33:39.017 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.019 [Task submitter] INFO  nextflow.Session - [c3/8516ab] Submitted process > flagstat (6)
-Feb-09 05:33:39.024 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.027 [Task submitter] INFO  nextflow.Session - [84/5d8f2d] Submitted process > depth (6)
-Feb-09 05:33:39.031 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.031 [Task submitter] INFO  nextflow.Session - [ea/1ce595] Submitted process > bamindex (6)
-Feb-09 05:33:39.051 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: bamindex (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/14/26c194f07acf238330a36c1a0f99db]
-Feb-09 05:33:39.087 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: bamprocess (4); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/eb/f557a4c135432d5f66f001623cf660]
-Feb-09 05:33:39.096 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.130 [Task submitter] INFO  nextflow.Session - [f2/445bb6] Submitted process > depth (7)
-Feb-09 05:33:39.132 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: depth (4); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/53/47739e16fa2d9b3b7225d9e3fd3315]
-Feb-09 05:33:39.135 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.168 [Task submitter] INFO  nextflow.Session - [e1/4dcb4c] Submitted process > bamindex (7)
-Feb-09 05:33:39.173 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.179 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: bamindex (4); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/6f/0f78880b215de18ec1c4eb3494311d]
-Feb-09 05:33:39.188 [Task submitter] INFO  nextflow.Session - [3d/e7f925] Submitted process > flagstat (7)
-Feb-09 05:33:39.196 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: depth (5); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/b4/3f58e4a053afd8d0025fa8967588ae]
-Feb-09 05:33:39.201 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.204 [Task submitter] INFO  nextflow.Session - [be/129289] Submitted process > nanoplot (7)
-Feb-09 05:33:39.228 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: bamprocess (8); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/1a/028a8c3e938bb3232cdb6fd5eb95f2]
-Feb-09 05:33:39.241 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.242 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: depth (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/12/c82c0b2a28121e98863a6c259508ac]
-Feb-09 05:33:39.242 [Task submitter] INFO  nextflow.Session - [8b/d8e533] Submitted process > bamindex (8)
-Feb-09 05:33:39.256 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.259 [Task submitter] INFO  nextflow.Session - [f4/0c62e0] Submitted process > depth (8)
-Feb-09 05:33:39.265 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.268 [Task submitter] INFO  nextflow.Session - [05/90865f] Submitted process > nanoplot (8)
-Feb-09 05:33:39.271 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.273 [Task submitter] INFO  nextflow.Session - [70/1a0f32] Submitted process > flagstat (8)
-Feb-09 05:33:39.299 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: minimap2norrna (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/eb/1d77ea3fb1e6cbaceb2089ea70832e]
-Feb-09 05:33:39.304 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: flagstat (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/d7/f65d3d773f99c5f6e691eda6d551a5]
-Feb-09 05:33:39.327 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: depth (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/7e/43a24a810cd997f5e449ac9ca209f0]
-Feb-09 05:33:39.390 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: bamindex (5); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/64/221e4eed798ff0e05591775cefe2b3]
-Feb-09 05:33:39.395 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: depth (6); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/84/5d8f2d53de91dbfc8d7fca47d4e66f]
-Feb-09 05:33:39.427 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: minimap2rrna (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/7c/1175b90582799e5749d6fcebe065f2]
-Feb-09 05:33:39.433 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: depth (7); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/f2/445bb6425766a27d91707e260d7d1a]
-Feb-09 05:33:39.493 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: bamprocess (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/cd/8592cb498255b5d21b405d962a1b01]
-Feb-09 05:33:39.509 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.532 [Task submitter] INFO  nextflow.Session - [ec/3ea4bd] Submitted process > depth (9)
-Feb-09 05:33:39.536 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: bamindex (6); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/ea/1ce595f649aa81f5981505154fc70c]
-Feb-09 05:33:39.539 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.563 [Task submitter] INFO  nextflow.Session - [56/9e9f8d] Submitted process > nanoplot (9)
-Feb-09 05:33:39.579 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: depth (8); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/f4/0c62e0d3bc5b850c2314c7a74b13b3]
-Feb-09 05:33:39.579 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.579 [Task submitter] INFO  nextflow.Session - [cb/3c9bf5] Submitted process > flagstat (9)
-Feb-09 05:33:39.584 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-09 05:33:39.585 [Task submitter] INFO  nextflow.Session - [c6/b5b58f] Submitted process > bamindex (9)
-Feb-09 05:33:39.587 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: minimap2norrna (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/9d/7ec756b42128979f012e899b5f4ec2]
-Feb-09 05:33:39.592 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: flagstat (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/57/918f03cbb0fa5415902d87e7de0d94]
-Feb-09 05:33:39.622 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: minimap2rrna (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/20/f7f3901cf145c29ca70672bb0de29a]
-Feb-09 05:33:39.667 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: flagstat (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/06/4c2116294fc8aba6d43a732f72b325]
-Feb-09 05:33:39.704 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: bamindex (7); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/e1/4dcb4cc3c80ca7589dbd82e63ac394]
-Feb-09 05:33:39.729 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: bamindex (8); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/8b/d8e533ea7c9cb66710e09f4490fcb4]
-Feb-09 05:33:39.915 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 54; name: bamindex (9); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/c6/b5b58f931a70d6df1b569ab30fb9f6]
-Feb-09 05:33:40.183 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: flagstat (4); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/d3/a2038809469d131ed0b2897fe5a66f]
-Feb-09 05:33:40.224 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 51; name: depth (9); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/ec/3ea4bd3290c01a40c8be9f2442b886]
-Feb-09 05:33:40.381 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: flagstat (5); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/ca/9f642f8f519f54049f67b41ac0e8e1]
-Feb-09 05:33:40.449 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: flagstat (7); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/3d/e7f925a87fc5e54489934efe20a97b]
-Feb-09 05:33:40.816 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: flagstat (6); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/c3/8516ab427737ad1836aac44d626b3c]
-Feb-09 05:33:40.883 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 53; name: flagstat (9); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/cb/3c9bf520aae13f246f32d1fca525af]
-Feb-09 05:33:40.943 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 50; name: flagstat (8); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/70/1a0f32405342427dfebd0b8d7d67b0]
-Feb-09 05:33:41.402 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: minimap2 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/86/81d7bbe502a586eee985ca7f427598]
-Feb-09 05:33:41.571 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: minimap2norrna (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/89/387872c3b5f1521182ecd0f8bcf24e]
-Feb-09 05:33:42.051 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: minimap2 (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/38/1f9652ab71c50c648580d939ba019a]
-Feb-09 05:33:42.174 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: minimap2 (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/47/1d0bea227ba136d8a4d1ba36439fd4]
-Feb-09 05:34:22.259 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: nanoplot (5); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/93/e08a8ac912f27942c2035e4e73a7e4]
-Feb-09 05:34:22.461 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: nanoplot (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/9f/e4a2f6f1a35a81fcd91ef058d71dc6]
-Feb-09 05:34:23.018 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: nanoplot (6); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/08/8be642ffeae46d4e299440f5047dc4]
-Feb-09 05:34:23.180 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: nanoplot (7); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/be/129289a133ea9ed5a01051ba4705d3]
-Feb-09 05:34:23.962 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: nanoplot (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/f8/f1ec939696de476d988db35ce410ae]
-Feb-09 05:34:25.446 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: nanoplot (4); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/69/02b8c8abdbc103993686c8e20f1aa6]
-Feb-09 05:34:25.969 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: nanoplot (8); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/05/90865f2303ffa3bd82170d4da0e1a5]
-Feb-09 05:34:26.092 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 52; name: nanoplot (9); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/56/9e9f8dad7638f890fe8a5eca00bcc1]
-Feb-09 05:34:26.296 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: nanoplot (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/03/6e07772c4f7f2728483295c1a7c20f]
-Feb-09 05:34:26.303 [main] DEBUG nextflow.Session - Session await > all process finished
-Feb-09 05:34:26.304 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Feb-09 05:34:26.310 [main] INFO  nextflow.Nextflow - 
+Feb-17 14:36:37.436 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: flagstat, minimap2rrna, depth, minimap2, minimap2norrna, nanoplot, bamprocess, bamindex
+Feb-17 14:36:37.498 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:minimap2` matches process minimap2
+Feb-17 14:36:37.506 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-17 14:36:37.506 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-17 14:36:37.510 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Feb-17 14:36:37.515 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=56; memory=188.8 GB; capacity=56; pollInterval=100ms; dumpInterval=5m
+Feb-17 14:36:37.638 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:minimap2rrna` matches process minimap2rrna
+Feb-17 14:36:37.640 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-17 14:36:37.640 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-17 14:36:37.647 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:minimap2norrna` matches process minimap2norrna
+Feb-17 14:36:37.648 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-17 14:36:37.649 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-17 14:36:37.655 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:bamprocess` matches process bamprocess
+Feb-17 14:36:37.655 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-17 14:36:37.655 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-17 14:36:37.660 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:flagstat` matches process flagstat
+Feb-17 14:36:37.661 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-17 14:36:37.661 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-17 14:36:37.672 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-17 14:36:37.673 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-17 14:36:37.678 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-17 14:36:37.678 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-17 14:36:37.688 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:nanoplot` matches process nanoplot
+Feb-17 14:36:37.689 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-17 14:36:37.689 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-17 14:36:38.116 [main] INFO  io.seqera.tower.plugin.TowerClient - Monitor the execution with Nextflow Tower using this url https://tower.nf/watch/4bwsgXeHjswhzh
+Feb-17 14:36:38.121 [main] DEBUG nextflow.Session - Ignite dataflow network (11)
+Feb-17 14:36:38.132 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > minimap2
+Feb-17 14:36:38.133 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > minimap2rrna
+Feb-17 14:36:38.134 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > minimap2norrna
+Feb-17 14:36:38.135 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bamprocess
+Feb-17 14:36:38.136 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > flagstat
+Feb-17 14:36:38.138 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > depth
+Feb-17 14:36:38.139 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bamindex
+Feb-17 14:36:38.140 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > nanoplot
+Feb-17 14:36:38.141 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Feb-17 14:36:38.141 [main] DEBUG nextflow.Session - Session await
+Feb-17 14:36:38.143 [PathVisitor-3] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /scratch/bhargava/workflows/drnaseq-nf/results/sams/; pattern: *.sam; options: [:]
+Feb-17 14:36:38.143 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /scratch/bhargava/workflows/drnaseq-nf/data/; pattern: *.fastq; options: [checkIfExists:true]
+Feb-17 14:36:38.143 [PathVisitor-2] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /scratch/bhargava/workflows/drnaseq-nf/data/; pattern: *.fastq; options: [checkIfExists:true]
+Feb-17 14:36:38.488 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:38.495 [Task submitter] INFO  nextflow.Session - [85/305cc6] Submitted process > bamprocess (3)
+Feb-17 14:36:38.504 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:38.505 [Task submitter] INFO  nextflow.Session - [0e/74b0b6] Submitted process > bamprocess (6)
+Feb-17 14:36:38.514 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:38.514 [Task submitter] INFO  nextflow.Session - [dd/8ee924] Submitted process > bamprocess (5)
+Feb-17 14:36:38.520 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:38.521 [Task submitter] INFO  nextflow.Session - [38/3ea6ac] Submitted process > bamprocess (8)
+Feb-17 14:36:38.526 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:38.526 [Task submitter] INFO  nextflow.Session - [29/c8a33f] Submitted process > bamprocess (9)
+Feb-17 14:36:38.531 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:38.531 [Task submitter] INFO  nextflow.Session - [4c/84169b] Submitted process > bamprocess (2)
+Feb-17 14:36:38.539 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:38.539 [Task submitter] INFO  nextflow.Session - [0e/fae27f] Submitted process > bamprocess (1)
+Feb-17 14:36:38.545 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:38.546 [Task submitter] INFO  nextflow.Session - [6e/268f5b] Submitted process > bamprocess (7)
+Feb-17 14:36:38.560 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:38.561 [Task submitter] INFO  nextflow.Session - [07/f61022] Submitted process > bamprocess (4)
+Feb-17 14:36:38.563 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [c3/c2fdfe] Cached process > minimap2 (2)
+Feb-17 14:36:38.563 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [17/751d13] Cached process > minimap2rrna (1)
+Feb-17 14:36:38.563 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [ff/4bc76d] Cached process > minimap2 (1)
+Feb-17 14:36:38.563 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [3b/7525ac] Cached process > minimap2norrna (1)
+Feb-17 14:36:38.563 [Actor Thread 14] INFO  nextflow.processor.TaskProcessor - [04/b6fa6d] Cached process > minimap2norrna (2)
+Feb-17 14:36:38.563 [Actor Thread 20] INFO  nextflow.processor.TaskProcessor - [6a/578d52] Cached process > minimap2rrna (3)
+Feb-17 14:36:38.564 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [30/3c2e39] Cached process > minimap2 (3)
+Feb-17 14:36:38.564 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [6a/fc10b0] Cached process > minimap2norrna (3)
+Feb-17 14:36:38.564 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [ac/d56980] Cached process > minimap2rrna (2)
+Feb-17 14:36:38.608 [Actor Thread 7] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=168; maxQueueSize=504; keepAlive=1m
+Feb-17 14:36:39.828 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: bamprocess (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/0e/fae27f32cac67224a046dce7d051d3]
+Feb-17 14:36:39.844 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:39.844 [Task submitter] INFO  nextflow.Session - [e9/264aeb] Submitted process > bamindex (1)
+Feb-17 14:36:39.850 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:39.851 [Task submitter] INFO  nextflow.Session - [a9/ec5569] Submitted process > flagstat (1)
+Feb-17 14:36:39.857 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:39.857 [Task submitter] INFO  nextflow.Session - [51/5e158d] Submitted process > nanoplot (1)
+Feb-17 14:36:39.862 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:39.862 [Task submitter] INFO  nextflow.Session - [9d/8b5d41] Submitted process > depth (1)
+Feb-17 14:36:39.947 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: bamprocess (5); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/dd/8ee9248b3e9cfb8b37cd8c22775f27]
+Feb-17 14:36:39.964 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:39.965 [Task submitter] INFO  nextflow.Session - [2d/030292] Submitted process > nanoplot (2)
+Feb-17 14:36:39.969 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:39.969 [Task submitter] INFO  nextflow.Session - [fc/c2d0d4] Submitted process > depth (2)
+Feb-17 14:36:39.975 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:39.975 [Task submitter] INFO  nextflow.Session - [fb/6bcce3] Submitted process > flagstat (2)
+Feb-17 14:36:39.979 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:39.979 [Task submitter] INFO  nextflow.Session - [12/c68124] Submitted process > bamindex (2)
+Feb-17 14:36:39.986 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: bamprocess (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/4c/84169ba7ed72f3a35190a68e785fa1]
+Feb-17 14:36:39.997 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:39.998 [Task submitter] INFO  nextflow.Session - [22/cefb22] Submitted process > nanoplot (3)
+Feb-17 14:36:40.003 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.003 [Task submitter] INFO  nextflow.Session - [7d/4bce36] Submitted process > bamindex (3)
+Feb-17 14:36:40.008 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.009 [Task submitter] INFO  nextflow.Session - [3b/17a7c1] Submitted process > flagstat (3)
+Feb-17 14:36:40.013 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.013 [Task submitter] INFO  nextflow.Session - [7d/ef24e0] Submitted process > depth (3)
+Feb-17 14:36:40.024 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: bamprocess (6); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/0e/74b0b61424706547152c8ec14f0ca5]
+Feb-17 14:36:40.033 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: bamprocess (4); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/07/f61022209bdb9fe963e25e36f5d0b5]
+Feb-17 14:36:40.037 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.037 [Task submitter] INFO  nextflow.Session - [ad/b58a97] Submitted process > depth (4)
+Feb-17 14:36:40.045 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.046 [Task submitter] INFO  nextflow.Session - [56/a777ee] Submitted process > nanoplot (4)
+Feb-17 14:36:40.049 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.049 [Task submitter] INFO  nextflow.Session - [22/41ac84] Submitted process > bamindex (4)
+Feb-17 14:36:40.053 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.054 [Task submitter] INFO  nextflow.Session - [74/a6be59] Submitted process > flagstat (4)
+Feb-17 14:36:40.059 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.059 [Task submitter] INFO  nextflow.Session - [6a/17abdb] Submitted process > bamindex (5)
+Feb-17 14:36:40.063 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.063 [Task submitter] INFO  nextflow.Session - [88/f54170] Submitted process > flagstat (5)
+Feb-17 14:36:40.068 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.069 [Task submitter] INFO  nextflow.Session - [c1/558c78] Submitted process > nanoplot (5)
+Feb-17 14:36:40.073 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.073 [Task submitter] INFO  nextflow.Session - [88/55aeab] Submitted process > depth (5)
+Feb-17 14:36:40.082 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: depth (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/9d/8b5d411c45edb9378d49c1110fcf55]
+Feb-17 14:36:40.148 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: bamprocess (8); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/38/3ea6ac4f9b2962171a5392e75d32b7]
+Feb-17 14:36:40.159 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: bamindex (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/e9/264aeb146089a3e679aeda0f60bf81]
+Feb-17 14:36:40.161 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.161 [Task submitter] INFO  nextflow.Session - [88/5922fa] Submitted process > bamindex (6)
+Feb-17 14:36:40.165 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.165 [Task submitter] INFO  nextflow.Session - [45/527b88] Submitted process > depth (6)
+Feb-17 14:36:40.169 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.170 [Task submitter] INFO  nextflow.Session - [f4/b6df56] Submitted process > nanoplot (6)
+Feb-17 14:36:40.174 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.174 [Task submitter] INFO  nextflow.Session - [a6/ce5909] Submitted process > flagstat (6)
+Feb-17 14:36:40.188 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: bamprocess (9); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/29/c8a33fcb0726150032b2c85782fd60]
+Feb-17 14:36:40.197 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.197 [Task submitter] INFO  nextflow.Session - [b8/1f2c3c] Submitted process > bamindex (7)
+Feb-17 14:36:40.201 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.201 [Task submitter] INFO  nextflow.Session - [b1/a9cd53] Submitted process > nanoplot (7)
+Feb-17 14:36:40.206 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.206 [Task submitter] INFO  nextflow.Session - [72/4bfc76] Submitted process > flagstat (7)
+Feb-17 14:36:40.210 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.210 [Task submitter] INFO  nextflow.Session - [f7/3edf09] Submitted process > depth (7)
+Feb-17 14:36:40.226 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: depth (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/fc/c2d0d4fee9c7f761d928988db0c108]
+Feb-17 14:36:40.238 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: bamindex (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/12/c68124721d8053d4689c2a4de7d274]
+Feb-17 14:36:40.290 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: bamprocess (7); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/6e/268f5bb5f426c5c710e26af4fbc4f0]
+Feb-17 14:36:40.296 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: depth (5); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/88/55aeab906c89b7e01026d34da8c6c8]
+Feb-17 14:36:40.300 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.301 [Task submitter] INFO  nextflow.Session - [ab/74a4a4] Submitted process > depth (8)
+Feb-17 14:36:40.304 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.305 [Task submitter] INFO  nextflow.Session - [2b/37a67f] Submitted process > flagstat (8)
+Feb-17 14:36:40.306 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: bamprocess (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/85/305cc686a9a2db5ece656f85a91dec]
+Feb-17 14:36:40.309 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.310 [Task submitter] INFO  nextflow.Session - [e8/b7f1a1] Submitted process > bamindex (8)
+Feb-17 14:36:40.314 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: bamindex (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/7d/4bce36e353779da96a3abfa2525ce6]
+Feb-17 14:36:40.318 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.319 [Task submitter] INFO  nextflow.Session - [f9/3bebdf] Submitted process > nanoplot (8)
+Feb-17 14:36:40.322 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.323 [Task submitter] INFO  nextflow.Session - [1b/00cf35] Submitted process > depth (9)
+Feb-17 14:36:40.325 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: depth (4); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/ad/b58a9722efc9f58251c0bce02cae37]
+Feb-17 14:36:40.326 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.327 [Task submitter] INFO  nextflow.Session - [f3/d726aa] Submitted process > bamindex (9)
+Feb-17 14:36:40.331 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.331 [Task submitter] INFO  nextflow.Session - [f5/dfcea3] Submitted process > flagstat (9)
+Feb-17 14:36:40.335 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-17 14:36:40.337 [Task submitter] INFO  nextflow.Session - [2a/3d6ac9] Submitted process > nanoplot (9)
+Feb-17 14:36:40.349 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: depth (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/7d/ef24e0789548cdcfa6eb42aa976200]
+Feb-17 14:36:40.375 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: bamindex (4); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/22/41ac84095b127275c5626302326933]
+Feb-17 14:36:40.380 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: bamindex (5); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/6a/17abdb4a33e02931617d3115282e39]
+Feb-17 14:36:40.414 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: depth (6); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/45/527b88fca50451b0b63e552237685c]
+Feb-17 14:36:40.453 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: bamindex (6); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/88/5922fa4b5e0bf398c84027259bcc42]
+Feb-17 14:36:40.507 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: bamindex (7); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/b8/1f2c3c22d8d989520ecdd7fb76bc2b]
+Feb-17 14:36:40.556 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: depth (8); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/ab/74a4a4ec069ae2e6203910ac4e912b]
+Feb-17 14:36:40.571 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: bamindex (8); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/e8/b7f1a1e4a6ca6acc2de2f067432122]
+Feb-17 14:36:40.629 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 52; name: bamindex (9); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/f3/d726aa9395ed8964469f88a1d654ac]
+Feb-17 14:36:40.699 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: depth (7); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/f7/3edf09d22f1df57a4fbeed4ae5e70b]
+Feb-17 14:36:40.713 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 54; name: depth (9); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/1b/00cf356aca65051077dcbabfaa2a6d]
+Feb-17 14:36:40.759 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: flagstat (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/a9/ec5569a1c496c0aefa7f9ee079f34a]
+Feb-17 14:36:40.927 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: flagstat (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/fb/6bcce3d1ba803cad4af1b881e55fef]
+Feb-17 14:36:41.081 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: flagstat (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/3b/17a7c1975edd86c6aafa7c6afde0f1]
+Feb-17 14:36:41.174 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: flagstat (6); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/a6/ce59095b1fa04a8d58495dbf2bf722]
+Feb-17 14:36:41.210 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: flagstat (4); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/74/a6be59018ed580cb838645b332b01b]
+Feb-17 14:36:41.471 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: flagstat (8); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/2b/37a67fce21906805a60013d577ac86]
+Feb-17 14:36:41.540 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: flagstat (5); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/88/f54170201936e887f54d152dc1f5d0]
+Feb-17 14:36:41.652 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 53; name: flagstat (9); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/f5/dfcea3996f9bbdfcb2d8e7676ffbd2]
+Feb-17 14:36:41.782 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: flagstat (7); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/72/4bfc766cb60a62d96320895f725391]
+Feb-17 14:37:25.375 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: nanoplot (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/2d/030292c42d7718adf712a4de1226f0]
+Feb-17 14:37:25.490 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: nanoplot (4); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/56/a777ee940bf7dd62fec0c91a836eea]
+Feb-17 14:37:25.606 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: nanoplot (5); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/c1/558c78c0ea0768efe510aa41e1a5e3]
+Feb-17 14:37:25.647 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: nanoplot (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/51/5e158db85d9d3d5918c1ab103d2c70]
+Feb-17 14:37:25.799 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: nanoplot (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/22/cefb22c6983db46c2748e3c9bd83ff]
+Feb-17 14:37:27.894 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: nanoplot (7); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/b1/a9cd534709144f393a9adfef002118]
+Feb-17 14:37:28.077 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 51; name: nanoplot (9); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/2a/3d6ac9e31b454db2674eac8d526914]
+Feb-17 14:37:28.293 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 50; name: nanoplot (8); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/f9/3bebdf6fb64105970e3a8f9f55d795]
+Feb-17 14:37:28.987 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: nanoplot (6); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/drnaseq-nf/work/f4/b6df56cc3765320f430798770b5ee5]
+Feb-17 14:37:28.994 [main] DEBUG nextflow.Session - Session await > all process finished
+Feb-17 14:37:28.995 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-17 14:37:28.999 [main] INFO  nextflow.Nextflow - 
 Done! Workflow complete
 
-Feb-09 05:34:26.342 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=54; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=7m 11s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=31; peakCpus=31; peakMemory=0; ]
-Feb-09 05:34:27.603 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
-Feb-09 05:34:27.609 [main] DEBUG nextflow.util.SpuriousDeps - AWS S3 uploader shutdown
-Feb-09 05:34:27.625 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+Feb-17 14:37:29.032 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=45; failedCount=0; ignoredCount=0; cachedCount=9; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=7m 1s; failedDuration=0ms; cachedDuration=16.4s;loadCpus=0; loadMemory=0; peakRunning=28; peakCpus=28; peakMemory=0; ]
+Feb-17 14:37:30.066 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Feb-17 14:37:30.071 [main] DEBUG nextflow.util.SpuriousDeps - AWS S3 uploader shutdown
+Feb-17 14:37:30.088 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

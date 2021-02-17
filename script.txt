@@ -112,3 +112,10 @@ change this file to test git push from code
         container = 'file:///data/bhargava/containers/nanoplot.1.33.sif'
 
 include { separatereads } from './separatereads'
+
+params.intersams = "results/sams-intermediate"
+params.mappedlists = "results/mappedlists"
+params.mappedfastqs = "results/mappedfastqs"
+params.unmappedfastqs = "results/unmappedfastqs"
+
+    params.samscombined = "$baseDir/results/sams/*.sam"

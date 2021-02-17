@@ -18,6 +18,7 @@ params.mappedlists = "results/mappedlists"
 params.mappedfastqs = "results/mappedfastqs"
 params.unmappedfastqs = "results/unmappedfastqs"
 
+
 log.info """\
          R N A S E Q - N F   P I P E L I N E
          ===================================
@@ -104,6 +105,7 @@ include { flagstat } from './flagstat'
 include { depth } from './depth'
 include { nanoplot } from './nanoplot'
 include { bamindex } from './bamindex'
+include { separatereads } from './separatereads'
 
 workflow {
     
@@ -122,7 +124,7 @@ workflow {
     params.samscombined = "$baseDir/results/sams/*.sam"
 
     Channel
-    .fromPath(params.samscombined, checkIfExists: true)
+    .fromPath(params.samscombined)
     .set { samscombined }
 
     bamprocess (samscombined)
@@ -134,6 +136,8 @@ workflow {
     bamindex (bamprocess.out)
 
     nanoplot (bamprocess.out)
+
+    separatereads (minimap2.out, reads)
 
 }
 
