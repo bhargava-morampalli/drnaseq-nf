@@ -1,3 +1,0 @@
-[E::hts_hopen] Failed to open file bams
-[E::hts_open_format] Failed to open file bams
-samtools index: failed to open "bams": Is a directory

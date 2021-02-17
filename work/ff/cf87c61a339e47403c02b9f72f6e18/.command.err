@@ -1,3 +1,0 @@
-[E::hts_open_format] Failed to open file "**.sam" : No such file or directory
-samtools view: failed to open "**.sam" for reading: No such file or directory
-samtools sort: failed to read header from "-"

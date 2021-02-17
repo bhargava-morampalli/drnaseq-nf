@@ -1,1 +1,0 @@
-FATAL:   could not open image /Users/bmorampa/Documents/containers/fastqc.sif: failed to retrieve path for /Users/bmorampa/Documents/containers/fastqc.sif: lstat /Users: no such file or directory
