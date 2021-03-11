@@ -10,7 +10,7 @@ process depth {
 
     script:
     """
-    samtools depth -m 0 $bams > ${bams.baseName}_depth.txt
+    samtools depth -a -m 0 $bams > ${bams.baseName}_depth.txt
     """
 
 }

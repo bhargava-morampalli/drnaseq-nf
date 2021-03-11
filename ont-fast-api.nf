@@ -6,12 +6,11 @@ process multitosingle {
     path fast5s
 
     output:
-    path "*.fast5", emit: bams
+    path params.singlefast5s
 
     script:
     """
-    multi_to_single_fast5 --input_path $fast5s --save_path /scratch/bhargava/nanopore/2020-10-28-BRM-K12-IVT-RNA-MULTI/basecall-bc2/single_fast5s --recursive
-    samtools view -S -b $sams | samtools sort -o ${sams.baseName}.sorted.bam
+    multi_to_single_fast5 -i $fast5s -s params.singlefast5s --recursive
     """
 
 }

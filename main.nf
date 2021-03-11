@@ -4,8 +4,8 @@ nextflow.enable.dsl=2
  * pipeline input parameters
  */
 params.reads = "$baseDir/data/*.fastq"
+params.fast5s = "$baseDir/data/*.fast5"
 params.reference = "/data/bhargava/reference_files/K12/K12a.fa"
-params.reference_norrna = "/data/bhargava/reference_files/K12/k12_norrna.fa"
 params.reference_rrna = "/data/bhargava/reference_files/K12/k12_rrna.fa"
 params.outdir = "results"
 params.sams = "results/sams"
@@ -17,128 +17,50 @@ params.intersams = "results/sams-intermediate"
 params.mappedlists = "results/mappedlists"
 params.mappedfastqs = "results/mappedfastqs"
 params.unmappedfastqs = "results/unmappedfastqs"
+params.singlefast5s = "results/singlefast5s"
+params.nanoplot_unmapped = "results/unmapped_nanoplot"
+params.nanocomp_stats = "results/nanocomp"
 
 
 log.info """\
          R N A S E Q - N F   P I P E L I N E
          ===================================
          reference        : ${params.reference}
-         reference_norrna : ${params.reference_norrna}
          reference_rrna   : ${params.reference_rrna}
          reads            : ${params.reads}
          outdir           : ${params.outdir}
          """
          .stripIndent()
 
-Channel
-    .fromPath(params.reads, checkIfExists: true)
-    .set { reads }
-
-/* 
- * Process: mapping the fastq files to the reference genome using minimap2
-*/
-
-process minimap2 {
-    
-    publishDir params.sams, mode:'copy'
-
-    input:
-    path reference
-    path reads
-
-    output:
-    path "*_full.sam", emit: fullsams
-
-    script:
-    """
-    minimap2 -ax splice -uf -k14 --secondary=no $reference $reads > ${reads.baseName}_full.sam
-    """
-
-}
-
-/* 
- * Process: mapping the fastq files to the rRNA reference using minimap2
-*/
-
-process minimap2rrna {
-    
-    publishDir params.sams, mode:'copy'
-
-    input:
-    path reference_rrna
-    path reads
-
-    output:
-    path "*_rrna.sam", emit: rrnasams
-
-    script:
-    """
-    minimap2 -ax splice -uf -k14 --secondary=no $reference_rrna $reads > ${reads.baseName}_rrna.sam
-    """
-
-}
-
-/* 
- * Process: mapping the fastq files to the rRNA reference using minimap2
-*/
-
-process minimap2norrna {
-    
-    publishDir params.sams, mode:'copy'
-
-    input:
-    path reference_norrna
-    path reads
-
-    output:
-    path "*_norrna.sam", emit: norrnasams
-
-    script:
-    """
-    minimap2 -ax splice -uf -k14 --secondary=no $reference_norrna $reads > ${reads.baseName}_norrna.sam
-    """
-
-}
-
 include { bamprocess } from './bamprocess'
 include { flagstat } from './flagstat'
 include { depth } from './depth'
 include { nanoplot } from './nanoplot'
 include { bamindex } from './bamindex'
+include { filtersams } from './filtersams'
 include { separatereads } from './separatereads'
+include { multitosingle } from './ont-fast-api'
+include { nanoplot_fastqs } from './nanoplot_fastqs'
+include { minimap2 } from './minimap2'
+
+reference = params.reference
+reference_rrna = params.reference_rrna
 
 workflow {
-    
-    reference = params.reference
-    reference_norrna = params.reference_norrna
-    reference_rrna = params.reference_rrna
 
     Channel
     .fromPath(params.reads, checkIfExists: true)
     .set { reads }
 
-    minimap2(reference, reads)
-    minimap2rrna(reference_rrna, reads)
-    minimap2norrna(reference_norrna, reads)
+    minimap2(reference, reference_rrna, reads)
+ 
+    bamprocess (minimap2.out.full_sams.concat(minimap2.out.rrna_sams)) | flagstat & depth & bamindex
 
-    params.samscombined = "$baseDir/results/sams/*.sam"
+    filtersams (minimap2.out.full_sams)
 
-    Channel
-    .fromPath(params.samscombined)
-    .set { samscombined }
-
-    bamprocess (samscombined)
+    separatereads (reads, filtersams.out.mappedids, filtersams.out.unmappedids)
     
-    flagstat (bamprocess.out)
-    
-    depth (bamprocess.out)
-
-    bamindex (bamprocess.out)
-
-    nanoplot (bamprocess.out)
-
-    separatereads (minimap2.out, reads)
-
+    nanoplot_fastqs (separatereads.out.unmappedfastqs)
 }
 
 workflow.onComplete {

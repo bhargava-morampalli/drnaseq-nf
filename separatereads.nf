@@ -1,29 +1,22 @@
 process separatereads {
 
-    publishDir params.intersams, mode:'copy', pattern: '*.sam'
-    publishDir params.mappedlists, mode:'copy', pattern: '*_ids.lst'
     publishDir params.mappedfastqs, mode:'copy', pattern: '*_mapped.fastq'
     publishDir params.unmappedfastqs, mode:'copy', pattern: '*_unmapped.fastq'
 
     input:
-    path sams
     path reads
+    path mappedids
+    path unmappedids
 
     output:
-    path "*.mapped.sam"
-    path "*.unmapped.sam"
-    path "*.mapped_ids.lst"
-    path "*.unmapped_ids.lst"
-    path "*_mapped.fastq"
-    path "*_unmapped.fastq"
+
+    path "*_mapped.fastq", emit: mappedfastqs
+    path "*_unmapped.fastq", emit: unmappedfastqs
 
     script:
     """
-    samtools view -S -F4 $sams > ${sams.baseName}.mapped.sam
-    samtools view -S -f4 $sams > ${sams.baseName}.unmapped.sam
-    cut -f1 ${sams.baseName}.mapped.sam | sort | uniq > ${sams.baseName}.mapped_ids.lst
-    cut -f1 ${sams.baseName}.unmapped.sam | sort | uniq > ${sams.baseName}.unmapped_ids.lst
-    seqtk subseq ${reads.baseName}.fastq ${sams.baseName}.mapped_ids.lst > ${sams.baseName}_mapped.fastq
-    seqtk subseq ${reads.baseName}.fastq ${sams.baseName}.unmapped_ids.lst > ${sams.baseName}_unmapped.fastq
+    seqtk subseq $reads $mappedids > ${reads.baseName}_mapped.fastq
+    seqtk subseq $reads $unmappedids > ${reads.baseName}_unmapped.fastq
     """
+
 }

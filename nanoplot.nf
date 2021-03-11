@@ -10,7 +10,7 @@ process nanoplot {
 
     script:
     """
-    NanoPlot -t 40 --bam $bams --plots hex dot kde --title "${bams}" --store --maxlength 10000 -p ${bams.baseName}-
+    NanoPlot -t 40 --bam $bams --plots hex dot kde --title "${bams}" --maxlength 10000 -p ${bams.baseName}-
     """
 
 }
