@@ -58,7 +58,7 @@ workflow {
 
     filtersams (minimap2.out.full_sams)
 
-    separatereads (reads, filtersams.out.mappedids, filtersams.out.unmappedids)
+    separatereads (reads, filtersams.out.mappedids,  filtersams.out.unmappedids)
     
     nanoplot_fastqs (separatereads.out.unmappedfastqs)
 }

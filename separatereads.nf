@@ -13,6 +13,9 @@ process separatereads {
     path "*_mapped.fastq", emit: mappedfastqs
     path "*_unmapped.fastq", emit: unmappedfastqs
 
+    when:
+    reads.simpleName == mapped_ids.simpleName
+
     script:
     """
     seqtk subseq $reads $mappedids > ${reads.baseName}_mapped.fastq
