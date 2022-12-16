@@ -1,0 +1,76 @@
+Jul-19 22:50:45.563 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -resume
+Jul-19 22:50:45.681 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.2
+Jul-19 22:50:45.707 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [compassionate_gates] - revision: 20deaf931b
+Jul-19 22:50:45.722 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /scratch/bhargava/workflows/extendedrefmods-nf/nextflow.config
+Jul-19 22:50:45.723 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/bhargava/workflows/extendedrefmods-nf/nextflow.config
+Jul-19 22:50:45.747 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jul-19 22:50:46.295 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/bhargavam/.nextflow/plugins
+Jul-19 22:50:46.296 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-19 22:50:46.300 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/21921f6807262d1f701978cdf8a1f5c4
+Jul-19 22:50:46.307 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-19 22:50:46.308 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-19 22:50:46.312 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jul-19 22:50:46.323 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-tower@1.1.0' resolved
+Jul-19 22:50:46.331 [main] DEBUG nextflow.plugin.PluginUpdater - Starting plugin nf-tower version: 1.1.0
+Jul-19 22:50:46.331 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-tower@1.1.0'
+Jul-19 22:50:46.337 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-tower@1.1.0
+Jul-19 22:50:46.381 [main] DEBUG nextflow.Session - Session uuid: 59340975-e2d0-458d-b090-14f276f37398
+Jul-19 22:50:46.381 [main] DEBUG nextflow.Session - Run name: compassionate_gates
+Jul-19 22:50:46.382 [main] DEBUG nextflow.Session - Executor pool size: 56
+Jul-19 22:50:46.409 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.2 build 5558
+  Created: 12-07-2021 07:54 UTC (19:54 NZDT)
+  System: Linux 4.15.0-142-generic
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 11.0.8-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 53038@gru [127.0.1.1]
+  CPUs: 56 - Mem: 188.8 GB (22 GB) - Swap: 61 GB (60.7 GB)
+Jul-19 22:50:46.453 [main] DEBUG nextflow.Session - Work-dir: /scratch/bhargava/workflows/extendedrefmods-nf/work [ext2/ext3]
+Jul-19 22:50:46.453 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/bhargava/workflows/extendedrefmods-nf/bin
+Jul-19 22:50:46.467 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-19 22:50:46.481 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-19 22:50:46.484 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Jul-19 22:50:46.824 [main] DEBUG nextflow.Session - Session start invoked
+Jul-19 22:50:46.840 [main] DEBUG io.seqera.tower.plugin.TowerClient - Creating Tower observer -- endpoint=https://api.tower.nf; requestInterval=1s; aliveInterval=1m; maxRetries=5; backOffBase=3; backOffDelay=250
+Jul-19 22:50:49.200 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-19 22:50:49.294 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: fast5subset, tomboresquiggle, nanodocpreprocess, multitosingle
+Jul-19 22:50:49.353 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 22:50:49.353 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 22:50:49.358 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-19 22:50:49.363 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=56; memory=188.8 GB; capacity=56; pollInterval=100ms; dumpInterval=5m
+Jul-19 22:50:49.462 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 22:50:49.462 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 22:50:49.471 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 22:50:49.471 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 22:50:49.477 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 22:50:49.477 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 22:50:49.957 [main] INFO  io.seqera.tower.plugin.TowerClient - Monitor the execution with Nextflow Tower using this url https://tower.nf/watch/559qU8sYmY1K0m
+Jul-19 22:50:49.962 [main] DEBUG nextflow.Session - Ignite dataflow network (9)
+Jul-19 22:50:49.973 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fast5subset
+Jul-19 22:50:49.974 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multitosingle
+Jul-19 22:50:49.975 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboresquiggle
+Jul-19 22:50:49.976 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > nanodocpreprocess
+Jul-19 22:50:49.977 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Jul-19 22:50:49.977 [main] DEBUG nextflow.Session - Session await
+Jul-19 22:50:50.201 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [4b/5d5a50] Cached process > fast5subset
+Jul-19 22:50:50.241 [Actor Thread 3] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=168; maxQueueSize=504; keepAlive=1m
+Jul-19 22:50:50.285 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 22:50:50.290 [Task submitter] INFO  nextflow.Session - [a7/d84184] Submitted process > multitosingle (1)
+Jul-19 22:50:51.155 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: multitosingle (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/a7/d841847624787bc90e1a8b63106614]
+Jul-19 22:50:51.188 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 22:50:51.189 [Task submitter] INFO  nextflow.Session - [6f/ddb720] Submitted process > tomboresquiggle (1)
+Jul-19 22:50:54.317 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: tomboresquiggle (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/6f/ddb7200515601394d5b1f14a1b3ad5]
+Jul-19 22:50:54.433 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process tomboresquiggle > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jul-19 22:50:54.450 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 22:50:54.451 [Task submitter] INFO  nextflow.Session - [2e/a41112] Submitted process > nanodocpreprocess (1)
+Jul-19 22:51:01.046 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: nanodocpreprocess (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/2e/a41112595a2c9d5e3217d8577ab55b]
+Jul-19 22:51:01.060 [main] DEBUG nextflow.Session - Session await > all process finished
+Jul-19 22:51:01.066 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-19 22:51:01.081 [main] INFO  nextflow.Nextflow - 
+Done! Workflow complete
+
+Jul-19 22:51:01.090 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=3; failedCount=0; ignoredCount=0; cachedCount=1; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=9.1s; failedDuration=0ms; cachedDuration=2.2s;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Jul-19 22:51:02.870 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Jul-19 22:51:02.871 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-tower@1.1.0'
+Jul-19 22:51:02.871 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-tower
+Jul-19 22:51:02.883 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

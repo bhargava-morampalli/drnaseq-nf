@@ -1,0 +1,152 @@
+Jul-19 22:46:55.526 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Jul-19 22:46:55.635 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.2
+Jul-19 22:46:55.660 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [loving_hugle] - revision: 55fe40d395
+Jul-19 22:46:55.675 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /scratch/bhargava/workflows/extendedrefmods-nf/nextflow.config
+Jul-19 22:46:55.676 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/bhargava/workflows/extendedrefmods-nf/nextflow.config
+Jul-19 22:46:55.701 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jul-19 22:46:56.215 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/bhargavam/.nextflow/plugins
+Jul-19 22:46:56.217 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-19 22:46:56.221 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/21921f6807262d1f701978cdf8a1f5c4
+Jul-19 22:46:56.228 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-19 22:46:56.229 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-19 22:46:56.232 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jul-19 22:46:56.244 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-tower@1.1.0' resolved
+Jul-19 22:46:56.251 [main] DEBUG nextflow.plugin.PluginUpdater - Starting plugin nf-tower version: 1.1.0
+Jul-19 22:46:56.251 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-tower@1.1.0'
+Jul-19 22:46:56.257 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-tower@1.1.0
+Jul-19 22:46:56.304 [main] DEBUG nextflow.Session - Session uuid: 59340975-e2d0-458d-b090-14f276f37398
+Jul-19 22:46:56.305 [main] DEBUG nextflow.Session - Run name: loving_hugle
+Jul-19 22:46:56.305 [main] DEBUG nextflow.Session - Executor pool size: 56
+Jul-19 22:46:56.332 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.2 build 5558
+  Created: 12-07-2021 07:54 UTC (19:54 NZDT)
+  System: Linux 4.15.0-142-generic
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 11.0.8-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 52129@gru [127.0.1.1]
+  CPUs: 56 - Mem: 188.8 GB (22 GB) - Swap: 61 GB (60.7 GB)
+Jul-19 22:46:56.355 [main] DEBUG nextflow.Session - Work-dir: /scratch/bhargava/workflows/extendedrefmods-nf/work [ext2/ext3]
+Jul-19 22:46:56.355 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/bhargava/workflows/extendedrefmods-nf/bin
+Jul-19 22:46:56.368 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-19 22:46:56.382 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-19 22:46:56.385 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Jul-19 22:46:56.672 [main] DEBUG nextflow.Session - Session start invoked
+Jul-19 22:46:56.690 [main] DEBUG io.seqera.tower.plugin.TowerClient - Creating Tower observer -- endpoint=https://api.tower.nf; requestInterval=1s; aliveInterval=1m; maxRetries=5; backOffBase=3; backOffDelay=250
+Jul-19 22:46:58.717 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-19 22:46:58.827 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: fast5subset, tomboresquiggle, nanodocpreprocess, multitosingle
+Jul-19 22:46:58.885 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 22:46:58.885 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 22:46:58.890 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-19 22:46:58.895 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=56; memory=188.8 GB; capacity=56; pollInterval=100ms; dumpInterval=5m
+Jul-19 22:46:58.988 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 22:46:58.988 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 22:46:58.996 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 22:46:58.996 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 22:46:59.002 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 22:46:59.002 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 22:46:59.458 [main] INFO  io.seqera.tower.plugin.TowerClient - Monitor the execution with Nextflow Tower using this url https://tower.nf/watch/1Dc0coOtcUorts
+Jul-19 22:46:59.462 [main] DEBUG nextflow.Session - Ignite dataflow network (8)
+Jul-19 22:46:59.472 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fast5subset
+Jul-19 22:46:59.473 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multitosingle
+Jul-19 22:46:59.474 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboresquiggle
+Jul-19 22:46:59.474 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > nanodocpreprocess
+Jul-19 22:46:59.476 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Jul-19 22:46:59.476 [main] DEBUG nextflow.Session - Session await
+Jul-19 22:46:59.652 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 22:46:59.658 [Task submitter] INFO  nextflow.Session - [4b/5d5a50] Submitted process > fast5subset
+Jul-19 22:47:02.063 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: fast5subset; status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/4b/5d5a50358be48768d71093029b5c89]
+Jul-19 22:47:02.099 [Actor Thread 4] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /scratch/bhargava/workflows/extendedrefmods-nf/results/native_bc1_16s/multifast5s -- Cause: java.nio.file.NoSuchFileException: /scratch/bhargava/workflows/extendedrefmods-nf/results/native_bc1_16s/multifast5s
+Jul-19 22:47:02.105 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=168; maxQueueSize=504; keepAlive=1m
+Jul-19 22:47:02.120 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 22:47:02.120 [Task submitter] INFO  nextflow.Session - [89/eaa0b1] Submitted process > multitosingle (1)
+Jul-19 22:47:02.991 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: multitosingle (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/89/eaa0b1621197b309d3a79efe41a2a5]
+Jul-19 22:47:03.007 [Actor Thread 4] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /scratch/bhargava/workflows/extendedrefmods-nf/results/native_bc1_16s/singlefast5s -- Cause: java.nio.file.NoSuchFileException: /scratch/bhargava/workflows/extendedrefmods-nf/results/native_bc1_16s/singlefast5s
+Jul-19 22:47:03.016 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'multitosingle (1)'
+
+Caused by:
+  Cannot get property 'baseName' on null object
+
+java.lang.NullPointerException: Cannot get property 'baseName' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:60)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:194)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:329)
+	at Script_9ece5d21$_runScript_closure6$_closure15.doCall(Script_9ece5d21:86)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at groovy.lang.GString.writeTo(GString.java:192)
+	at groovy.lang.GString.toString(GString.java:157)
+	at nextflow.processor.LazyMap.resolveImpl(TaskConfig.groovy:542)
+	at nextflow.processor.LazyMap.resolveParams(TaskConfig.groovy:511)
+	at nextflow.processor.LazyMap.resolve(TaskConfig.groovy:476)
+	at nextflow.processor.LazyMap.get(TaskConfig.groovy:557)
+	at nextflow.processor.TaskConfig.get(TaskConfig.groovy:112)
+	at nextflow.processor.TaskConfig.getPublishDir(TaskConfig.groovy:303)
+	at nextflow.processor.TaskProcessor.publishOutputs(TaskProcessor.groovy:1235)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at nextflow.processor.TaskProcessor.finalizeTask0(TaskProcessor.groovy:2127)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at nextflow.processor.TaskProcessor.finalizeTask(TaskProcessor.groovy:2098)
+	at nextflow.processor.TaskPollingMonitor.checkTaskStatus(TaskPollingMonitor.groovy:616)
+	at nextflow.processor.TaskPollingMonitor.checkAllTasks(TaskPollingMonitor.groovy:534)
+	at nextflow.processor.TaskPollingMonitor.pollLoop(TaskPollingMonitor.groovy:409)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:1029)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:1012)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:101)
+	at nextflow.processor.TaskPollingMonitor$_start_closure2.doCall(TaskPollingMonitor.groovy:293)
+	at nextflow.processor.TaskPollingMonitor$_start_closure2.call(TaskPollingMonitor.groovy)
+	at groovy.lang.Closure.run(Closure.java:493)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Jul-19 22:47:03.021 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 22:47:03.024 [Task submitter] INFO  nextflow.Session - [ce/afc7df] Submitted process > tomboresquiggle (1)
+Jul-19 22:47:03.025 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Cannot get property 'baseName' on null object
+Jul-19 22:47:03.050 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+[process] nanodocpreprocess
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: singlefast5s
+  port 1: (queue) OPEN  ; channel: reference
+  port 2: (queue) OPEN  ; channel: flag
+  port 3: (cntrl) -     ; channel: $
+
+Jul-19 22:47:03.068 [main] DEBUG nextflow.Session - Session await > all process finished
+Jul-19 22:47:03.069 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-19 22:47:03.082 [main] INFO  nextflow.Nextflow - Oops .. something went wrong
+Jul-19 22:47:03.087 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (1)
+Jul-19 22:47:03.099 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=1; runningCount=0; retriesCount=0; abortedCount=1; succeedDuration=2.2s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Jul-19 22:47:03.585 [main] WARN  i.s.tower.plugin.TowerJsonGenerator - Tower request field `workflow.errorMessage` exceeds expected size | offending value: `| 0 of 1|                                                                                                                                                                                                                                                                       |  0% ETA:  --:--:--
+/ 1 of 1|########################################################################################################################################################################################################################################################################|100% ETA:  0:00:00
+| 1 of 1|########################################################################################################################################################################################################################################################################|100% Time: 0:00:00`, size: 878 (max: 255)
+Jul-19 22:47:04.076 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Jul-19 22:47:04.076 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-tower@1.1.0'
+Jul-19 22:47:04.077 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-tower
+Jul-19 22:47:04.088 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

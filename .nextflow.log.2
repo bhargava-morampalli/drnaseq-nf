@@ -1,0 +1,80 @@
+Jul-19 22:46:00.632 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Jul-19 22:46:00.723 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.2
+Jul-19 22:46:00.745 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [adoring_payne] - revision: fa17c3031b
+Jul-19 22:46:00.758 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /scratch/bhargava/workflows/extendedrefmods-nf/nextflow.config
+Jul-19 22:46:00.758 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/bhargava/workflows/extendedrefmods-nf/nextflow.config
+Jul-19 22:46:00.777 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jul-19 22:46:01.262 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/bhargavam/.nextflow/plugins
+Jul-19 22:46:01.264 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-19 22:46:01.268 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/21921f6807262d1f701978cdf8a1f5c4
+Jul-19 22:46:01.274 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-19 22:46:01.275 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-19 22:46:01.278 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jul-19 22:46:01.289 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-tower@1.1.0' resolved
+Jul-19 22:46:01.296 [main] DEBUG nextflow.plugin.PluginUpdater - Starting plugin nf-tower version: 1.1.0
+Jul-19 22:46:01.296 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-tower@1.1.0'
+Jul-19 22:46:01.301 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-tower@1.1.0
+Jul-19 22:46:01.343 [main] DEBUG nextflow.Session - Session uuid: c18da2f2-a5ed-4db9-b6e0-f628bfbb1299
+Jul-19 22:46:01.343 [main] DEBUG nextflow.Session - Run name: adoring_payne
+Jul-19 22:46:01.344 [main] DEBUG nextflow.Session - Executor pool size: 56
+Jul-19 22:46:01.369 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.2 build 5558
+  Created: 12-07-2021 07:54 UTC (19:54 NZDT)
+  System: Linux 4.15.0-142-generic
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 11.0.8-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 51918@gru [127.0.1.1]
+  CPUs: 56 - Mem: 188.8 GB (22 GB) - Swap: 61 GB (60.7 GB)
+Jul-19 22:46:01.389 [main] DEBUG nextflow.Session - Work-dir: /scratch/bhargava/workflows/extendedrefmods-nf/work [ext2/ext3]
+Jul-19 22:46:01.389 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/bhargava/workflows/extendedrefmods-nf/bin
+Jul-19 22:46:01.401 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-19 22:46:01.413 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-19 22:46:01.416 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Jul-19 22:46:01.694 [main] DEBUG nextflow.Session - Session start invoked
+Jul-19 22:46:01.708 [main] DEBUG io.seqera.tower.plugin.TowerClient - Creating Tower observer -- endpoint=https://api.tower.nf; requestInterval=1s; aliveInterval=1m; maxRetries=5; backOffBase=3; backOffDelay=250
+Jul-19 22:46:04.128 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-19 22:46:04.212 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: fast5subset, tomboresquiggle, nanodocpreprocess, multitosingle
+Jul-19 22:46:04.263 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 22:46:04.264 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 22:46:04.268 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-19 22:46:04.273 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=56; memory=188.8 GB; capacity=56; pollInterval=100ms; dumpInterval=5m
+Jul-19 22:46:04.358 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 22:46:04.358 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 22:46:04.365 [main] DEBUG nextflow.Session - Session aborted -- Cause: No such property: m2snative16sbc1 for class: nextflow.script.WorkflowBinding
+Jul-19 22:46:04.398 [main] ERROR nextflow.cli.Launcher - @unknown
+groovy.lang.MissingPropertyException: No such property: m2snative16sbc1 for class: nextflow.script.WorkflowBinding
+	at groovy.lang.Binding.getVariable(Binding.java:61)
+	at nextflow.script.WorkflowBinding.getVariable(WorkflowBinding.groovy:114)
+	at groovy.lang.Binding.getProperty(Binding.java:116)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:194)
+	at groovy.lang.Closure.getPropertyTryThese(Closure.java:320)
+	at groovy.lang.Closure.getPropertyDelegateFirst(Closure.java:310)
+	at groovy.lang.Closure.getProperty(Closure.java:296)
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:341)
+	at Script_c57224fc$_runScript_closure9$_closure23.doCall(Script_c57224fc:155)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:186)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:170)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:52)
+	at nextflow.script.ChainableDef$invoke_a.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.script.BaseScript.runDsl2(BaseScript.groovy:191)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:200)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:221)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:212)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:120)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:302)
+	at nextflow.cli.Launcher.run(Launcher.groovy:475)
+	at nextflow.cli.Launcher.main(Launcher.groovy:657)

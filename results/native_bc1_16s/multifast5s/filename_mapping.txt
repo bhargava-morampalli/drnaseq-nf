@@ -1,0 +1,10 @@
+219a6e65-124f-4a55-9376-5ab04aa7ac6b	native_bc1_16s-0.fast5
+d57f3477-c515-47c6-96bb-ebc5efcd0d3f	native_bc1_16s-0.fast5
+a2d967b4-f27a-4099-8c3b-6e77864d6399	native_bc1_16s-0.fast5
+41fec0a6-bacf-4d5e-8b0c-27f5d5f9b6f4	native_bc1_16s-0.fast5
+552f7a01-a59b-4ca3-b340-57199d899a91	native_bc1_16s-0.fast5
+97449126-840a-4ead-b130-15aec364acd0	native_bc1_16s-0.fast5
+04c8c578-0b49-4abb-9249-d52feba09cdc	native_bc1_16s-0.fast5
+3ee4fff4-be5e-4ade-bd08-8256648c9483	native_bc1_16s-0.fast5
+b5b9d9bd-fcd8-4a09-ad9c-86203b5b6351	native_bc1_16s-0.fast5
+a9b8ecaf-2724-4b38-a525-a58734d4c3ae	native_bc1_16s-0.fast5

@@ -1,0 +1,9 @@
+singlefast5s/0/97449126-840a-4ead-b130-15aec364acd0.fast5,16s1_extended,337,1685
+singlefast5s/0/3ee4fff4-be5e-4ade-bd08-8256648c9483.fast5,16s1_extended,337,1865
+singlefast5s/0/a9b8ecaf-2724-4b38-a525-a58734d4c3ae.fast5,16s1_extended,340,1749
+singlefast5s/0/a2d967b4-f27a-4099-8c3b-6e77864d6399.fast5,16s1_extended,341,1843
+singlefast5s/0/04c8c578-0b49-4abb-9249-d52feba09cdc.fast5,16s1_extended,567,1903
+singlefast5s/0/552f7a01-a59b-4ca3-b340-57199d899a91.fast5,16s1_extended,871,1895
+singlefast5s/0/41fec0a6-bacf-4d5e-8b0c-27f5d5f9b6f4.fast5,16s1_extended,1292,1870
+singlefast5s/0/b5b9d9bd-fcd8-4a09-ad9c-86203b5b6351.fast5,16s1_extended,1420,1760
+singlefast5s/0/219a6e65-124f-4a55-9376-5ab04aa7ac6b.fast5,16s1_extended,1479,1814

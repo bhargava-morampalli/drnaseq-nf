@@ -1,0 +1,438 @@
+Jul-19 20:45:18.946 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Jul-19 20:45:19.057 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.2
+Jul-19 20:45:19.085 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [goofy_kalam] - revision: c5a8eba179
+Jul-19 20:45:19.100 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /scratch/bhargava/workflows/extendedrefmods-nf/nextflow.config
+Jul-19 20:45:19.101 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/bhargava/workflows/extendedrefmods-nf/nextflow.config
+Jul-19 20:45:19.126 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jul-19 20:45:19.654 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/bhargavam/.nextflow/plugins
+Jul-19 20:45:19.656 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-19 20:45:19.660 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/21921f6807262d1f701978cdf8a1f5c4
+Jul-19 20:45:19.667 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-19 20:45:19.668 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-19 20:45:19.671 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jul-19 20:45:19.683 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-tower@1.1.0' resolved
+Jul-19 20:45:19.690 [main] DEBUG nextflow.plugin.PluginUpdater - Starting plugin nf-tower version: 1.1.0
+Jul-19 20:45:19.691 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-tower@1.1.0'
+Jul-19 20:45:19.696 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-tower@1.1.0
+Jul-19 20:45:19.742 [main] DEBUG nextflow.Session - Session uuid: 557b8904-9f26-406f-b31e-bdd68b390f5a
+Jul-19 20:45:19.742 [main] DEBUG nextflow.Session - Run name: goofy_kalam
+Jul-19 20:45:19.743 [main] DEBUG nextflow.Session - Executor pool size: 56
+Jul-19 20:45:19.770 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.2 build 5558
+  Created: 12-07-2021 07:54 UTC (19:54 NZDT)
+  System: Linux 4.15.0-142-generic
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 11.0.8-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 18928@gru [127.0.1.1]
+  CPUs: 56 - Mem: 188.8 GB (22.2 GB) - Swap: 61 GB (60.7 GB)
+Jul-19 20:45:19.801 [main] DEBUG nextflow.Session - Work-dir: /scratch/bhargava/workflows/extendedrefmods-nf/work [ext2/ext3]
+Jul-19 20:45:19.802 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/bhargava/workflows/extendedrefmods-nf/bin
+Jul-19 20:45:19.817 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-19 20:45:19.832 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-19 20:45:19.835 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Jul-19 20:45:20.095 [main] DEBUG nextflow.Session - Session start invoked
+Jul-19 20:45:20.109 [main] DEBUG io.seqera.tower.plugin.TowerClient - Creating Tower observer -- endpoint=https://api.tower.nf; requestInterval=1s; aliveInterval=1m; maxRetries=5; backOffBase=3; backOffDelay=250
+Jul-19 20:45:22.317 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-19 20:45:22.888 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: ndocivt16sbc1, fast5subset, ivt23sbc1subset, native23sbc2subset, resquigglenative16sbc1, resquigglenative16sbc3, ndocivt23sbc3, native16sbc1subset, resquigglenative16sbc2, ndocivt23sbc2, ndocivt23sbc1, nanodocpreprocess, m2snative16sbc3, native23sbc1subset, m2snative16sbc2, ivt16sbc3subset, ndocnative16sbc1, native16sbc2subset, ivt23sbc2subset, m2snative16sbc1, ndocnative16sbc2, ndocnative16sbc3, ivt16sbc2subset, resquiggleivt16sbc1, resquiggleivt16sbc2, resquiggleivt16sbc3, native16sbc3subset, ivt23sbc3subset, m2sivt16sbc3, ndocnative23sbc1, m2sivt16sbc2, m2sivt16sbc1, multitosingle, m2snative23sbc3, m2snative23sbc2, ivt16sbc1subset, resquiggleivt23sbc2, resquiggleivt23sbc3, ndocnative23sbc3, ndocnative23sbc2, m2snative23sbc1, m2sivt23sbc1, m2sivt23sbc3, native23sbc3subset, m2sivt23sbc2, resquiggleivt23sbc1, tomboresquiggle, resquigglenative23sbc3, resquigglenative23sbc2, ndocivt16sbc2, ndocivt16sbc3, resquigglenative23sbc1
+Jul-19 20:45:22.954 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:22.954 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:22.959 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-19 20:45:22.965 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=56; memory=188.8 GB; capacity=56; pollInterval=100ms; dumpInterval=5m
+Jul-19 20:45:23.066 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.066 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.072 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.072 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.077 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.078 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.082 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.083 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.087 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.088 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.093 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.093 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.102 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.102 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.109 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.110 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.116 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.116 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.121 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.121 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.124 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.124 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.134 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.134 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.138 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.139 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.143 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.144 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.148 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.148 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.155 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.155 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.158 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.158 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.161 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.161 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.163 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.163 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.166 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.167 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.169 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.169 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.172 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.172 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.174 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.174 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.181 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.181 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.183 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.184 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.186 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.186 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.189 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.189 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.192 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.192 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.194 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.195 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.197 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.197 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.199 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.200 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.202 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.202 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.204 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.204 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.206 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.206 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.208 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.209 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.214 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.214 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.216 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.216 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.218 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.219 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.221 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.221 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.223 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.223 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.225 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.225 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.227 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.227 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.229 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.230 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.232 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.232 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.234 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.234 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.236 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.236 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:23.238 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-19 20:45:23.238 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-19 20:45:24.079 [main] INFO  io.seqera.tower.plugin.TowerClient - Monitor the execution with Nextflow Tower using this url https://tower.nf/watch/L6ivrSExRaiPW
+Jul-19 20:45:24.083 [main] DEBUG nextflow.Session - Ignite dataflow network (74)
+Jul-19 20:45:24.099 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > native16sbc1subset
+Jul-19 20:45:24.100 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > native16sbc2subset
+Jul-19 20:45:24.101 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > native16sbc3subset
+Jul-19 20:45:24.101 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > native23sbc1subset
+Jul-19 20:45:24.102 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > native23sbc2subset
+Jul-19 20:45:24.102 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > native23sbc3subset
+Jul-19 20:45:24.103 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ivt16sbc1subset
+Jul-19 20:45:24.104 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ivt16sbc2subset
+Jul-19 20:45:24.106 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ivt16sbc3subset
+Jul-19 20:45:24.106 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ivt23sbc1subset
+Jul-19 20:45:24.107 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ivt23sbc2subset
+Jul-19 20:45:24.107 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ivt23sbc3subset
+Jul-19 20:45:24.108 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > m2snative16sbc1
+Jul-19 20:45:24.108 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > m2snative16sbc2
+Jul-19 20:45:24.109 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > m2snative16sbc3
+Jul-19 20:45:24.110 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > m2snative23sbc1
+Jul-19 20:45:24.111 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > m2snative23sbc2
+Jul-19 20:45:24.112 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > m2snative23sbc3
+Jul-19 20:45:24.112 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > m2sivt16sbc1
+Jul-19 20:45:24.113 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > m2sivt16sbc2
+Jul-19 20:45:24.114 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > m2sivt16sbc3
+Jul-19 20:45:24.115 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > m2sivt23sbc1
+Jul-19 20:45:24.115 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > m2sivt23sbc2
+Jul-19 20:45:24.116 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > m2sivt23sbc3
+Jul-19 20:45:24.117 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > resquigglenative16sbc1
+Jul-19 20:45:24.117 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > resquigglenative23sbc1
+Jul-19 20:45:24.118 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > resquigglenative16sbc2
+Jul-19 20:45:24.118 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > resquigglenative23sbc2
+Jul-19 20:45:24.119 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > resquigglenative16sbc3
+Jul-19 20:45:24.121 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > resquigglenative23sbc3
+Jul-19 20:45:24.122 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > resquiggleivt16sbc1
+Jul-19 20:45:24.122 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > resquiggleivt23sbc1
+Jul-19 20:45:24.123 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > resquiggleivt16sbc2
+Jul-19 20:45:24.123 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > resquiggleivt23sbc2
+Jul-19 20:45:24.124 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > resquiggleivt16sbc3
+Jul-19 20:45:24.124 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > resquiggleivt23sbc3
+Jul-19 20:45:24.125 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ndocnative16sbc1
+Jul-19 20:45:24.125 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ndocnative16sbc2
+Jul-19 20:45:24.126 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ndocnative16sbc3
+Jul-19 20:45:24.127 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ndocnative23sbc1
+Jul-19 20:45:24.127 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ndocnative23sbc2
+Jul-19 20:45:24.129 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ndocnative23sbc3
+Jul-19 20:45:24.131 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ndocivt16sbc1
+Jul-19 20:45:24.131 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ndocivt16sbc2
+Jul-19 20:45:24.133 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ndocivt16sbc3
+Jul-19 20:45:24.133 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ndocivt23sbc1
+Jul-19 20:45:24.134 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ndocivt23sbc2
+Jul-19 20:45:24.136 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ndocivt23sbc3
+Jul-19 20:45:24.136 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Jul-19 20:45:24.136 [main] DEBUG nextflow.Session - Session await
+Jul-19 20:45:24.414 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:24.422 [Task submitter] INFO  nextflow.Session - [c5/39ce6e] Submitted process > native23sbc2subset
+Jul-19 20:45:24.432 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:24.432 [Task submitter] INFO  nextflow.Session - [f5/5b6f64] Submitted process > native16sbc2subset
+Jul-19 20:45:24.443 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:24.444 [Task submitter] INFO  nextflow.Session - [78/aac7b7] Submitted process > ivt23sbc2subset
+Jul-19 20:45:24.450 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:24.451 [Task submitter] INFO  nextflow.Session - [d4/0ed914] Submitted process > native16sbc3subset
+Jul-19 20:45:24.457 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:24.457 [Task submitter] INFO  nextflow.Session - [8c/188e90] Submitted process > ivt16sbc1subset
+Jul-19 20:45:24.463 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:24.463 [Task submitter] INFO  nextflow.Session - [22/f40f86] Submitted process > native23sbc3subset
+Jul-19 20:45:24.469 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:24.469 [Task submitter] INFO  nextflow.Session - [73/30bf33] Submitted process > native16sbc1subset
+Jul-19 20:45:24.476 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:24.476 [Task submitter] INFO  nextflow.Session - [2d/8dd1ea] Submitted process > ivt23sbc3subset
+Jul-19 20:45:24.482 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:24.482 [Task submitter] INFO  nextflow.Session - [32/3b244c] Submitted process > ivt16sbc2subset
+Jul-19 20:45:24.488 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:24.488 [Task submitter] INFO  nextflow.Session - [86/2aed83] Submitted process > ivt16sbc3subset
+Jul-19 20:45:24.498 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:24.498 [Task submitter] INFO  nextflow.Session - [c1/2688a5] Submitted process > ivt23sbc1subset
+Jul-19 20:45:24.507 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:24.507 [Task submitter] INFO  nextflow.Session - [42/cb4e20] Submitted process > native23sbc1subset
+Jul-19 20:45:25.450 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: ivt23sbc3subset; status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/2d/8dd1ea7d8b0199cc89b6bf19360936]
+Jul-19 20:45:25.480 [Actor Thread 21] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /scratch/bhargava/workflows/extendedrefmods-nf/results/ivt_bc3_23s/multifast5s -- Cause: java.nio.file.NoSuchFileException: /scratch/bhargava/workflows/extendedrefmods-nf/results/ivt_bc3_23s/multifast5s
+Jul-19 20:45:25.492 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:25.492 [Task submitter] INFO  nextflow.Session - [c8/aa7de1] Submitted process > m2sivt23sbc3 (1)
+Jul-19 20:45:25.493 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=168; maxQueueSize=504; keepAlive=1m
+Jul-19 20:45:25.518 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: ivt16sbc3subset; status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/86/2aed835d722afbca4d91a5a82fc2b1]
+Jul-19 20:45:25.538 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:25.538 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: ivt23sbc2subset; status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/78/aac7b7d724e0173773b53ec25b8517]
+Jul-19 20:45:25.539 [Task submitter] INFO  nextflow.Session - [65/2c92eb] Submitted process > m2sivt16sbc3 (1)
+Jul-19 20:45:25.545 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: ivt16sbc2subset; status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/32/3b244c44a986d0f06ca8eab8015468]
+Jul-19 20:45:25.549 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:25.549 [Task submitter] INFO  nextflow.Session - [96/26eac1] Submitted process > m2sivt23sbc2 (1)
+Jul-19 20:45:25.564 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:25.565 [Task submitter] INFO  nextflow.Session - [47/5cbb8c] Submitted process > m2sivt16sbc2 (1)
+Jul-19 20:45:26.373 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: m2sivt23sbc3 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/c8/aa7de1322512fe583a7276a07d2ce4]
+Jul-19 20:45:26.386 [Actor Thread 21] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /scratch/bhargava/workflows/extendedrefmods-nf/results/ivt_bc3_23s/singlefast5s -- Cause: java.nio.file.NoSuchFileException: /scratch/bhargava/workflows/extendedrefmods-nf/results/ivt_bc3_23s/singlefast5s
+Jul-19 20:45:26.393 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:26.394 [Task submitter] INFO  nextflow.Session - [b3/5a4f6b] Submitted process > resquiggleivt23sbc3 (1)
+Jul-19 20:45:26.461 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: m2sivt23sbc2 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/96/26eac1187efedcb518869ad50091b8]
+Jul-19 20:45:26.482 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:26.483 [Task submitter] INFO  nextflow.Session - [e7/256069] Submitted process > resquiggleivt23sbc2 (1)
+Jul-19 20:45:26.499 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: m2sivt16sbc2 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/47/5cbb8ccc3d2708febebc30f7c27d06]
+Jul-19 20:45:26.512 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:26.512 [Task submitter] INFO  nextflow.Session - [c9/981cb2] Submitted process > resquiggleivt16sbc2 (1)
+Jul-19 20:45:26.527 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: m2sivt16sbc3 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/65/2c92eb98bfda8a25c28edc847f5279]
+Jul-19 20:45:26.542 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:26.547 [Task submitter] INFO  nextflow.Session - [41/a58110] Submitted process > resquiggleivt16sbc3 (1)
+Jul-19 20:45:27.607 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: resquiggleivt23sbc3 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/b3/5a4f6bc2db1e2df1088be6e1188d19]
+Jul-19 20:45:27.704 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process resquiggleivt23sbc3 > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jul-19 20:45:27.717 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:27.717 [Task submitter] INFO  nextflow.Session - [4c/d36145] Submitted process > ndocivt23sbc3 (1)
+Jul-19 20:45:27.757 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: resquiggleivt23sbc2 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/e7/25606947f91f07c24516e4c65288e8]
+Jul-19 20:45:27.760 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process resquiggleivt23sbc2 > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jul-19 20:45:27.771 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:27.772 [Task submitter] INFO  nextflow.Session - [b1/31fdf5] Submitted process > ndocivt23sbc2 (1)
+Jul-19 20:45:27.778 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: resquiggleivt16sbc2 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/c9/981cb2117a56223b5f3daeac95ab34]
+Jul-19 20:45:27.779 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process resquiggleivt16sbc2 > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jul-19 20:45:27.786 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:27.787 [Task submitter] INFO  nextflow.Session - [7d/4db8ec] Submitted process > ndocivt16sbc2 (1)
+Jul-19 20:45:27.802 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: resquiggleivt16sbc3 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/41/a581104078a49dd8d92fa46dfc3df3]
+Jul-19 20:45:27.804 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process resquiggleivt16sbc3 > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jul-19 20:45:27.812 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:27.813 [Task submitter] INFO  nextflow.Session - [36/5e5a39] Submitted process > ndocivt16sbc3 (1)
+Jul-19 20:45:28.223 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: native23sbc2subset; status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/c5/39ce6e6a7395053a09429c52979d37]
+Jul-19 20:45:28.242 [Actor Thread 21] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /scratch/bhargava/workflows/extendedrefmods-nf/results/native_bc2_23s/multifast5s -- Cause: java.nio.file.NoSuchFileException: /scratch/bhargava/workflows/extendedrefmods-nf/results/native_bc2_23s/multifast5s
+Jul-19 20:45:28.271 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:28.292 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: native16sbc2subset; status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/f5/5b6f64e132ef3b3281c0670556aa0c]
+Jul-19 20:45:28.292 [Task submitter] INFO  nextflow.Session - [fe/63a0ff] Submitted process > m2snative23sbc2 (1)
+Jul-19 20:45:28.304 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:28.311 [Task submitter] INFO  nextflow.Session - [06/71be80] Submitted process > m2snative16sbc2 (1)
+Jul-19 20:45:29.176 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: m2snative23sbc2 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/fe/63a0ff66ee9375869bce41c6a6488b]
+Jul-19 20:45:29.189 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:29.190 [Task submitter] INFO  nextflow.Session - [63/3177da] Submitted process > resquigglenative23sbc2 (1)
+Jul-19 20:45:29.195 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: m2snative16sbc2 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/06/71be8052c5e37d8a79594394cb1534]
+Jul-19 20:45:29.213 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:29.213 [Task submitter] INFO  nextflow.Session - [ea/8fea09] Submitted process > resquigglenative16sbc2 (1)
+Jul-19 20:45:30.235 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: resquigglenative23sbc2 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/63/3177daa6729a89a2f15a44a6d450f2]
+Jul-19 20:45:30.237 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process resquigglenative23sbc2 > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jul-19 20:45:30.246 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:30.246 [Task submitter] INFO  nextflow.Session - [1a/07a912] Submitted process > ndocnative23sbc2 (1)
+Jul-19 20:45:30.252 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: resquigglenative16sbc2 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/ea/8fea09e4ec734b5d8fa69d91e5cf0f]
+Jul-19 20:45:30.253 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process resquigglenative16sbc2 > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jul-19 20:45:30.260 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:30.260 [Task submitter] INFO  nextflow.Session - [97/b3de7d] Submitted process > ndocnative16sbc2 (1)
+Jul-19 20:45:32.837 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: ivt16sbc1subset; status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/8c/188e9042fab24348616b158683ab93]
+Jul-19 20:45:32.848 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-19 20:45:32.848 [Task submitter] INFO  nextflow.Session - [19/f3880b] Submitted process > m2sivt16sbc1 (1)
+Jul-19 20:45:32.885 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: ndocivt23sbc3 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/4c/d361453c1b76fe8b953160a7b1e617]
+Jul-19 20:45:32.921 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'ndocivt23sbc3 (1)'
+
+Caused by:
+  Missing output file(s) `*.pq` expected by process `ndocivt23sbc3 (1)`
+
+Command executed:
+
+  source ~/nanoDoc/src/venv3/bin/activate
+  python /home/bhargavam/nanoDoc/src/nanoDoc.py formatfile -i singlefast5s -o ./ -r 23s1_extended.fa -t 50
+  deactivate
+
+Command exit status:
+  0
+
+Command output:
+  singlefast5s ./
+  make index
+  0 files to process
+  start sorting
+  end sorting
+  writing file
+  end writing file
+  make parquet
+
+Command error:
+  2021-07-19 20:45:29.046120: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+  
+  0it [00:00, ?it/s]
+
+Work dir:
+  /scratch/bhargava/workflows/extendedrefmods-nf/work/4c/d361453c1b76fe8b953160a7b1e617
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+Jul-19 20:45:32.926 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Missing output file(s) `*.pq` expected by process `ndocivt23sbc3 (1)`
+Jul-19 20:45:32.970 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+[process] m2snative16sbc1
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: multitosingleinputpath
+  port 1: (value) OPEN  ; channel: flag
+  port 2: (cntrl) -     ; channel: $
+
+[process] m2snative16sbc3
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: multitosingleinputpath
+  port 1: (value) OPEN  ; channel: flag
+  port 2: (cntrl) -     ; channel: $
+
+[process] m2snative23sbc1
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: multitosingleinputpath
+  port 1: (value) OPEN  ; channel: flag
+  port 2: (cntrl) -     ; channel: $
+
+[process] m2snative23sbc3
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: multitosingleinputpath
+  port 1: (value) OPEN  ; channel: flag
+  port 2: (cntrl) -     ; channel: $
+
+[process] m2sivt23sbc1
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: multitosingleinputpath
+  port 1: (value) OPEN  ; channel: flag
+  port 2: (cntrl) -     ; channel: $
+
+[process] resquigglenative16sbc1
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: singlefast5s
+  port 1: (queue) OPEN  ; channel: reference
+  port 2: (queue) OPEN  ; channel: flag
+  port 3: (cntrl) -     ; channel: $
+
+[process] resquigglenative23sbc1
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: singlefast5s
+  port 1: (queue) OPEN  ; channel: reference
+  port 2: (queue) OPEN  ; channel: flag
+  port 3: (cntrl) -     ; channel: $
+
+[process] resquigglenative16sbc3
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: singlefast5s
+  port 1: (queue) OPEN  ; channel: reference
+  port 2: (queue) OPEN  ; channel: flag
+  port 3: (cntrl) -     ; channel: $
+
+[process] resquigglenative23sbc3
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: singlefast5s
+  port 1: (queue) OPEN  ; channel: reference
+  port 2: (queue) OPEN  ; channel: flag
+  port 3: (cntrl) -     ; channel: $
+
+[process] resquiggleivt16sbc1
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: singlefast5s
+  port 1: (queue) OPEN  ; channel: reference
+  port 2: (queue) OPEN  ; channel: flag
+  port 3: (cntrl) -     ; channel: $
+
+[process] resquiggleivt23sbc1
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: singlefast5s
+  port 1: (queue) OPEN  ; channel: reference
+  port 2: (queue) OPEN  ; channel: flag
+  port 3: (cntrl) -     ; channel: $
+
+[process] ndocnative16sbc1
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: singlefast5s
+  port 1: (queue) OPEN  ; channel: reference
+  port 2: (queue) OPEN  ; channel: flag
+  port 3: (cntrl) -     ; channel: $
+
+[process] ndocnative16sbc3
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: singlefast5s
+  port 1: (queue) OPEN  ; channel: reference
+  port 2: (queue) OPEN  ; channel: flag
+  port 3: (cntrl) -     ; channel: $
+
+[process] ndocnative23sbc1
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: singlefast5s
+  port 1: (queue) OPEN  ; channel: reference
+  port 2: (queue) OPEN  ; channel: flag
+  port 3: (cntrl) -     ; channel: $
+
+[process] ndocnative23sbc3
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: singlefast5s
+  port 1: (queue) OPEN  ; channel: reference
+  port 2: (queue) OPEN  ; channel: flag
+  port 3: (cntrl) -     ; channel: $
+
+[process] ndocivt16sbc1
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: singlefast5s
+  port 1: (queue) OPEN  ; channel: reference
+  port 2: (queue) OPEN  ; channel: flag
+  port 3: (cntrl) -     ; channel: $
+
+[process] ndocivt23sbc1
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: singlefast5s
+  port 1: (queue) OPEN  ; channel: reference
+  port 2: (queue) OPEN  ; channel: flag
+  port 3: (cntrl) -     ; channel: $
+
+Jul-19 20:45:32.973 [main] DEBUG nextflow.Session - Session await > all process finished
+Jul-19 20:45:32.977 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-19 20:45:32.986 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: ndocivt23sbc2 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/b1/31fdf56f2b40c9544870af2277b4c5]
+Jul-19 20:45:32.989 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: ndocivt16sbc2 (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/extendedrefmods-nf/work/7d/4db8ecc3c185ae3c319097c7a05537]
+Jul-19 20:45:32.999 [main] INFO  nextflow.Nextflow - Oops .. something went wrong
+Jul-19 20:45:33.004 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (9)
+Jul-19 20:45:33.049 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=19; failedCount=3; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=1; retriesCount=0; abortedCount=8; succeedDuration=29s; failedDuration=12.1s; cachedDuration=0ms;loadCpus=1; loadMemory=0; peakRunning=12; peakCpus=12; peakMemory=0; ]
+Jul-19 20:45:35.476 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Jul-19 20:45:35.476 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-tower@1.1.0'
+Jul-19 20:45:35.476 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-tower
+Jul-19 20:45:35.487 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

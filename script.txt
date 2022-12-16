@@ -268,3 +268,86 @@ seqtk subseq $reads ${sams.baseName}.mapped_ids.lst > ${sams.baseName}_mapped.fa
 
      publishDir params.mappedfastqs, mode:'copy', pattern: '*_mapped.fastq'
     publishDir params.unmappedfastqs, mode:'copy', pattern: '*_unmapped.fastq'
+
+
+seqkit sample -n 10 g9-ivt-bc1_16s.fastq -o /data/bhargava/combinedrnamods/g9/data/subsample_bc1_16s.fastq
+seqkit sample -n 10 g9-ivt-bc2_16s.fastq -o /data/bhargava/combinedrnamods/g9/data/subsample_bc2_16s.fastq
+seqkit sample -n 10 g9-ivt-bc3_16s.fastq -o /data/bhargava/combinedrnamods/g9/data/subsample_bc3_16s.fastq
+
+seqkit sample -n 10 g9-ivt-bc1_23s.fastq -o /data/bhargava/combinedrnamods/g9/data/subsample_bc1_23s.fastq
+seqkit sample -n 10 g9-ivt-bc2_23s.fastq -o /data/bhargava/combinedrnamods/g9/data/subsample_bc2_23s.fastq
+seqkit sample -n 10 g9-ivt-bc3_23s.fastq -o /data/bhargava/combinedrnamods/g9/data/subsample_bc3_23s.fastq
+
+seqkit sample -n 10 g9-native_bc1_16s.fastq -o /data/bhargava/combinedrnamods/g9/data/native/native_bc1_16s.fastq
+seqkit sample -n 10 g9-native_bc2_16s.fastq -o /data/bhargava/combinedrnamods/g9/data/native/native_bc2_16s.fastq
+seqkit sample -n 10 g9-native_bc3_16s.fastq -o /data/bhargava/combinedrnamods/g9/data/native/native_bc3_16s.fastq
+
+seqkit sample -n 10 g9-native_bc1_23s.fastq -o /data/bhargava/combinedrnamods/g9/data/native/native_bc1_23s.fastq
+seqkit sample -n 10 g9-native_bc2_23s.fastq -o /data/bhargava/combinedrnamods/g9/data/native/native_bc2_23s.fastq
+seqkit sample -n 10 g9-native_bc3_23s.fastq -o /data/bhargava/combinedrnamods/g9/data/native/native_bc3_23s.fastq
+
+
+seqkit fq2fa subsample_bc1_16s.fastq -o subsample_bc1_16s.fasta
+seqkit fq2fa subsample_bc1_23s.fastq -o subsample_bc1_23s.fasta
+
+
+seqkit seq subsample_bc1_16s.fasta -n -i > subsample_bc1_16s.txt
+seqkit seq subsample_bc1_23s.fasta -n -i > subsample_bc1_23s.txt
+
+seqkit fq2fa native_bc1_16s.fastq -o native_bc1_16s.fasta
+seqkit fq2fa native_bc1_23s.fastq -o native_bc1_23s.fasta
+
+seqkit seq native_bc1_16s.fasta -n -i > native_bc1_16s.txt
+seqkit seq native_bc1_23s.fasta -n -i > native_bc1_23s.txt
+
+
+    val flag
+
+    val true, emit: subsetdone_ch
+
+
+    val flag
+
+    val true, emit: multidone_ch
+
+
+process {
+    withName:minimap2 {
+        container = 'file:///data/bhargava/containers/minimap2.2.17.sif'
+    }
+    withName:bamprocess {
+        container = 'file:///data/bhargava/containers/samtools.1.10.sif'
+    }
+    withName:flagstat {
+        container = 'file:///data/bhargava/containers/samtools.1.10.sif'
+    }
+    withName:nanoplot {
+        container = 'file:///data/bhargava/containers/nanoplot.1.33.sif'
+    }
+}
+
+
+
+params.reads = "$baseDir/data/*.fastq"
+
+
+    Channel
+    .fromPath(params.reads, checkIfExists: true)
+    .set { reads }
+
+
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*native_bc1_16s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*native_bc2_16s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*native_bc3_16s*", mode:'copy'
+
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*native_bc1_23s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*native_bc2_23s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*native_bc3_23s*", mode:'copy'
+
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*ivt_bc1_16s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*ivt_bc2_16s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*ivt_bc3_16s*", mode:'copy'
+
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*ivt_bc1_23s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*ivt_bc2_23s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*ivt_bc3_23s*", mode:'copy'
